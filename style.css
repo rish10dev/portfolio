@@ -2460,3 +2460,664 @@ font-size:34px;
     filter:blur(120px);
     z-index:1;
 }
+/* =========================================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- GLOBAL ---------- */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    * {
+        max-width: 100%;
+    }
+
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        height: 65px;
+        padding: 0 18px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-email {
+        display: none;
+    }
+
+    .navbar nav {
+        gap: 14px;
+    }
+
+    .navbar nav a {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+
+    /* ---------- SOCIAL BAR ---------- */
+
+    .social-fixed {
+        display: none;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .intro {
+        min-height: 100svh;
+        height: 100svh;
+        padding: 80px 20px 40px;
+    }
+
+    .top-line {
+        font-size: 9px;
+        letter-spacing: 3px;
+        text-align: center;
+        margin-bottom: 70px;
+        white-space: nowrap;
+    }
+
+    .intro h1 {
+        font-size: clamp(65px, 22vw, 120px);
+        letter-spacing: 3px;
+        line-height: .85;
+        text-align: center;
+    }
+
+    .intro h2 {
+        font-size: clamp(65px, 22vw, 120px);
+        letter-spacing: 3px;
+        line-height: .85;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .hero-description {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .hero-description p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+        margin: 30px auto 0;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 13px 20px;
+    }
+
+    .scroll-line {
+        height: 45px;
+        margin-top: 12px;
+    }
+
+    .scroll-text {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+
+    /* ---------- PORTFOLIO ---------- */
+
+    .portfolio-container {
+        height: 430px;
+        width: 100%;
+    }
+
+    .portfolio-text {
+        font-size: 29vw;
+        letter-spacing: -7px;
+        line-height: 1;
+        transform: scaleY(1.15);
+        white-space: nowrap;
+    }
+
+    .portfolio-text span {
+        -webkit-text-stroke: 2px white;
+    }
+
+    .center-image {
+        width: min(85vw, 380px);
+        height: auto;
+        max-height: 330px;
+        object-fit: contain;
+        top: 65px;
+    }
+
+    .portfolio-details {
+        margin-top: -15px;
+        padding: 0 20px;
+        font-size: 12px;
+        line-height: 1.7;
+        letter-spacing: .7px;
+        text-align: left;
+    }
+
+
+    /* ---------- PROJECTS ---------- */
+
+    .projects {
+        padding: 80px 20px;
+    }
+
+    .projects-heading p {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .projects-heading h2 {
+        font-size: clamp(60px, 18vw, 90px);
+        line-height: .85;
+        letter-spacing: -1px;
+        margin-bottom: 40px;
+    }
+
+    .projects-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+        overflow: visible;
+        padding-bottom: 0;
+    }
+
+    .project-card {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 15px;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 330px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .overlay {
+        padding: 20px;
+    }
+
+    .overlay p {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .overlay h3 {
+        font-size: 25px;
+    }
+
+    .project-buttons {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .github-btn,
+    .demo-btn {
+        padding: 9px 16px;
+        font-size: 11px;
+    }
+
+
+    /* ---------- TECH CORE ---------- */
+
+    .tech-core {
+        min-height: auto;
+        padding: 60px 15px;
+    }
+
+    .tech-header {
+        margin-bottom: 20px;
+    }
+
+    .tech-header h2 {
+        font-size: clamp(45px, 14vw, 70px);
+        letter-spacing: 2px;
+        line-height: .9;
+    }
+
+    .tech-header span {
+        font-size: 12px;
+        padding: 0 15px;
+    }
+
+    .core-container {
+        width: 100%;
+        height: 650px;
+        transform: none;
+        margin: 0 auto;
+    }
+
+    .core-card {
+        width: 150px;
+        height: 150px;
+    }
+
+    .ring1 {
+        width: 130px;
+        height: 130px;
+    }
+
+    .ring2 {
+        width: 100px;
+        height: 100px;
+    }
+
+    .core-glow {
+        width: 90px;
+        height: 90px;
+    }
+
+    .core-center {
+        font-size: 35px;
+        letter-spacing: 4px;
+    }
+
+
+    /* ---------- TECH MAP ---------- */
+
+    .tech-map {
+        height: auto;
+        min-height: 900px;
+        margin-top: 50px;
+        padding: 30px 15px;
+    }
+
+    .center-core {
+        width: 150px;
+        height: 150px;
+    }
+
+    .center-core h2 {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+
+    .center-core p {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .node {
+        width: 105px;
+        height: 105px;
+    }
+
+    .node img {
+        width: 40px;
+        height: 35px;
+        margin-bottom: 4px;
+    }
+
+    .node h3 {
+        font-size: 12px;
+    }
+
+    .node span {
+        display: none;
+    }
+
+    /*
+       Reposition the technology nodes so
+       they stay inside the phone screen.
+    */
+
+    .node-python {
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .node-ocr {
+        top: 20%;
+        left: 5%;
+    }
+
+    .node-sentiment {
+        top: 20%;
+        right: 5%;
+    }
+
+    .node-numpy {
+        top: 42%;
+        left: 2%;
+        transform: translateY(-50%);
+    }
+
+    .node-git {
+        top: 42%;
+        right: 2%;
+        transform: translateY(-50%);
+    }
+
+    .node-analysis {
+        bottom: 15%;
+        left: 5%;
+    }
+
+    .node-pandas {
+        bottom: 15%;
+        right: 5%;
+    }
+
+    .node-visualization {
+        bottom: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    /* ---------- CAREER ---------- */
+
+    .career-section {
+        padding: 70px 20px;
+    }
+
+    .career-heading {
+        margin-bottom: 50px;
+    }
+
+    .career-heading p {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .career-heading h2 {
+        font-size: clamp(60px, 18vw, 90px);
+        letter-spacing: -1px;
+    }
+
+    .career-line {
+        left: 18px;
+        top: 190px;
+        bottom: 30px;
+    }
+
+    .career-item {
+        display: grid;
+        grid-template-columns: 25px 1fr;
+        gap: 15px;
+        margin-bottom: 65px;
+    }
+
+    .career-dot {
+        width: 13px;
+        height: 13px;
+        grid-column: 1;
+    }
+
+    .career-left,
+    .career-right {
+        grid-column: 2;
+        text-align: left;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .career-left::after,
+    .career-right::before {
+        display: none;
+    }
+
+    .career-left h3 {
+        font-size: 30px;
+        line-height: 1;
+    }
+
+    .career-left span {
+        font-size: 15px;
+        margin-top: 8px;
+    }
+
+    .career-right {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .career-year {
+        display: none;
+    }
+
+    /* Reverse timeline becomes normal on mobile */
+
+    .career-item.reverse {
+        display: grid;
+        grid-template-columns: 25px 1fr;
+        gap: 15px;
+    }
+
+    .career-item.reverse .career-right,
+    .career-item.reverse .career-left {
+        grid-column: 2;
+        text-align: left;
+        padding: 0;
+    }
+
+    .career-item.reverse .career-dot {
+        grid-column: 1;
+    }
+
+    .career-item.reverse .career-year {
+        display: none;
+    }
+
+    .career-item.reverse .career-right::after,
+    .career-item.reverse .career-left::before {
+        display: none;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .contact {
+        padding: 90px 20px 40px;
+        min-height: auto;
+    }
+
+    .contact-bg {
+        font-size: 28vw;
+        top: 20px;
+        right: -5px;
+    }
+
+    .contact::before {
+        font-size: 30vw;
+        top: 30px;
+        right: 10px;
+    }
+
+    .contact-title {
+        font-size: clamp(60px, 18vw, 90px);
+        margin-bottom: 55px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .contact-label {
+        font-size: 11px;
+        letter-spacing: 4px;
+        margin-bottom: 10px;
+    }
+
+    .contact-info h3 {
+        font-size: 20px;
+        margin-bottom: 30px;
+        word-break: break-word;
+    }
+
+    .contact-social a {
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+
+    .contact-end {
+        text-align: left;
+    }
+
+    .contact-end h3 {
+        font-size: 21px;
+        white-space: normal;
+        line-height: 1.5;
+    }
+
+    .contact-end p {
+        font-size: 16px;
+    }
+
+
+    /* ---------- CURSOR GLOW ---------- */
+
+    /*
+       Mouse cursor doesn't exist on most phones.
+       Hide the glow so it doesn't interfere with touch.
+    */
+
+    .cursor-glow {
+        display: none;
+    }
+
+
+    /* ---------- GRAIN ---------- */
+
+    .grain {
+        opacity: .025;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 0 14px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .navbar nav {
+        gap: 10px;
+    }
+
+    .navbar nav a {
+        font-size: 8px;
+        letter-spacing: .7px;
+    }
+
+    .intro {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .top-line {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .portfolio-container {
+        height: 370px;
+    }
+
+    .portfolio-text {
+        font-size: 27vw;
+        letter-spacing: -5px;
+    }
+
+    .center-image {
+        width: 90vw;
+        max-height: 290px;
+        top: 55px;
+    }
+
+    .portfolio-details {
+        font-size: 10px;
+        padding: 0 15px;
+    }
+
+    .projects {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .project-card img {
+        height: 280px;
+    }
+
+    .tech-map {
+        min-height: 820px;
+    }
+
+    .node {
+        width: 90px;
+        height: 90px;
+    }
+
+    .node h3 {
+        font-size: 10px;
+    }
+
+    .center-core {
+        width: 130px;
+        height: 130px;
+    }
+
+    .center-core h2 {
+        font-size: 23px;
+    }
+
+    .career-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .career-line {
+        left: 15px;
+    }
+
+    .career-item {
+        grid-template-columns: 20px 1fr;
+        gap: 12px;
+    }
+
+    .career-left h3 {
+        font-size: 26px;
+    }
+
+    .career-right {
+        font-size: 13px;
+    }
+
+    .contact {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
