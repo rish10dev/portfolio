@@ -1949,1689 +1949,325 @@ transform:translateY(-120px);
 }
 
 }
-/* ==============================
-        RESPONSIVE
-================================ */
-
-@media(max-width:1200px){
-
-.core-container{
-
-transform:scale(.82);
-
-height:900px;
-
-}
-
-}
-
-@media(max-width:992px){
-
-.tech-header h2{
-
-font-size:58px;
-
-}
-
-.tech-header span{
-
-font-size:16px;
-
-}
-
-.core-container{
-
-transform:scale(.68);
-
-height:850px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.tech-header{
-
-margin-bottom:50px;
-
-}
-
-.tech-header h2{
-
-font-size:42px;
-
-}
-
-.tech-header span{
-
-font-size:14px;
-
-padding:0 20px;
-
-display:block;
-
-}
-
-.core-container{
-
-transform:scale(.48);
-
-height:700px;
-
-margin-top:-120px;
-
-}
-
-.node{
-
-width:95px;
-height:95px;
-
-}
-
-.node h3{
-
-font-size:13px;
-
-}
-
-.node span{
-
-display:none;
-
-}
-
-.center-core{
-
-width:160px;
-height:160px;
-
-}
-
-.center-core h2{
-
-font-size:28px;
-
-}
-
-}
-
-@media(max-width:480px){
-
-.core-container{
-
-transform:scale(.38);
-
-margin-top:-180px;
-
-height:600px;
-
-}
-
-.tech-header h2{
-
-font-size:34px;
-
-}
-
-}
-
-
-/* =====================================
-   CAREER SECTION
-===================================== */
-
-.career-section{
-    position:relative;
-    padding: 0px 8%;
-    overflow:hidden;
-}
-
-/* Background Glow */
-
-.career-section::before{
-    content:"";
-    position:absolute;
-    left:50%;
-    top:45%;
-    transform:translate(-50%,-50%);
-    width:700px;
-    height:700px;
-    background:radial-gradient(circle,
-        rgba(255,45,122,.08),
-        transparent 70%);
-    pointer-events:none;
-}
-
-/* =====================================
-   HEADING
-===================================== */
-/* =========================
-   EXPERIENCE / JOURNEY
-========================= */
-
-.career {
-    position: relative;
-    width: 100%;
-    padding: 120px 6% 160px;
-    overflow: hidden;
-}
-
-.career-heading {
-    text-align: center;
-    margin-bottom: 100px;
-}
-
-.career-heading p {
-    font-size: 16px;
-    letter-spacing: 6px;
-    color: #e98bb8;
-    margin-bottom: 10px;
-}
-
-.career-heading h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(70px, 10vw, 150px);
-    line-height: 0.9;
-    color: #ffffff;
-    margin: 0;
-}
-
-
-/* CENTER VERTICAL LINE */
-
-.career-line {
-    position: absolute;
-    top: 280px;
-    bottom: 120px;
-    left: 50%;
-    width: 2px;
-    transform: translateX(-50%);
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        #b3004f 8%,
-        #b3004f 92%,
-        transparent
-    );
-}
-
-
-/* EACH TIMELINE ITEM */
-
-.career-item {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 120px 1fr;
-    align-items: center;
-
-    width: 100%;
-    max-width: 1400px;
-
-    min-height: 260px;
-
-    margin: 0 auto;
-}
-
-
-/* LEFT SIDE */
-
-.career-left {
-    grid-column: 1;
-
-    padding-right: 70px;
-
-    text-align: right;
-
-    max-width: 620px;
-    justify-self: end;
-}
-
-
-/* RIGHT SIDE */
-
-.career-right {
-    grid-column: 3;
-
-    padding-left: 70px;
-
-    max-width: 620px;
-
-    font-size: 18px;
-    line-height: 1.8;
-    color: #cfcfcf;
-
-    text-align: left;
-}
-
-
-/* CENTER NUMBER */
-
-.career-year {
-    grid-column: 2;
-
-    text-align: center;
-
-    font-family: 'Bebas Neue', sans-serif;
-
-    font-size: 70px;
-    line-height: 1;
-
-    color: #d9d9d9;
-
-    z-index: 4;
-}
-
-
-/* CENTER DOT */
-.career-item:nth-of-type(even) .career-year {
-    transform: translateX(60px);
-}
-
-.career-item:nth-of-type(odd) .career-year {
-    transform: translateX(-60px);
-}
-
-
-
-
-
-
-/* BADGES */
-
-.badge {
-    display: inline-block;
-
-    padding: 10px 24px;
-
-    margin-bottom: 18px;
-
-    border-radius: 30px;
-
-    font-size: 13px;
-
-    letter-spacing: 3px;
-
-    text-transform: uppercase;
-
-    font-weight: 600;
-}
-
-
-/* BADGE COLORS */
-
-.badge.current {
-    color: #ff5fa8;
-    border: 1px solid #7a1648;
-    background: rgba(255, 20, 120, 0.04);
-}
-
-.badge.internship {
-    color: #42e89b;
-    border: 1px solid #125d3d;
-    background: rgba(0, 255, 130, 0.04);
-}
-
-.badge.certification {
-    color: #e5b532;
-    border: 1px solid #705817;
-    background: rgba(255, 190, 0, 0.04);
-}
-
-
-/* TITLES */
-
-.career-left h3 {
-    margin: 0;
-
-    font-family: 'Bebas Neue', sans-serif;
-
-    font-size: clamp(32px, 3vw, 52px);
-
-    line-height: 1;
-
-    color: #eee8ee;
-
-    letter-spacing: 1px;
-}
-
-
-/* SMALL LABEL UNDER TITLE */
-
-.career-left span {
-    display: block;
-
-    margin-top: 16px;
-
-    font-size: 16px;
-
-    color: #d85b91;
-}
-/* Reduce spacing between main sections */
-section {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
-/* Journey */
-.career {
-    padding-top: 0px;
-    padding-bottom: 80px;
-}
-
-/* Projects */
-#projects {
-    padding-top: 0px;
-    padding-bottom: 80px;
-}
-
-/* Skills */
-#skills {
-    padding-top: 0px;
-    padding-bottom: 80px;
-}
-
-/* Contact */
-#contact {
-    padding-top: 0px;
-    padding-bottom: 80px;
-}
-
-/* =========================
-   REVERSE ITEMS
-========================= */
-
-.career-item.reverse .career-left {
-    grid-column: 3;
-
-    text-align: left;
-
-    padding-left: 70px;
-    padding-right: 0;
-
-    justify-self: start;
-}
-
-.career-item.reverse .career-right {
-    grid-column: 1;
-
-    text-align: right;
-
-    padding-right: 70px;
-    padding-left: 0;
-
-    justify-self: end;
-}
-
-.career-item.reverse .career-left::after {
-    right: auto;
-    left: calc(50% + 60px);
-}
-
-.career-item.reverse .career-right::before {
-    left: auto;
-    right: calc(50% + 60px);
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-
-    .career {
-        padding: 80px 25px 100px;
-    }
-
-    .career-heading {
-        margin-bottom: 70px;
-    }
-
-    .career-line {
-        left: 25px;
-        top: 220px;
-        bottom: 80px;
-    }
-
-    .career-item,
-    .career-item.reverse {
-
-        display: block;
-
-        position: relative;
-
-        min-height: 0;
-
-        padding-left: 55px;
-
-        margin-bottom: 90px;
-    }
-
-
-    .career-left,
-    .career-item.reverse .career-left {
-
-        display: block;
-
-        padding: 0 !important;
-
-        text-align: left;
-
-        max-width: none;
-
-        margin-bottom: 25px;
-    }
-
-
-    .career-right,
-    .career-item.reverse .career-right {
-
-        display: block;
-
-        padding: 0 !important;
-
-        text-align: left;
-
-        max-width: none;
-
-        font-size: 16px;
-
-        line-height: 1.7;
-    }
-
-
-    .career-year {
-
-        position: absolute;
-
-        left: -5px;
-        top: 0;
-
-        font-size: 38px;
-
-        transform: translateX(-50%);
-
-        display: none;
-    }
-
-
-    .career-dot {
-
-        left: 0;
-        top: 15px;
-
-        width: 14px;
-        height: 14px;
-
-        transform: translateX(-50%);
-    }
-
-
-    .career-left::after,
-    .career-right::before,
-    .career-item.reverse .career-left::after,
-    .career-item.reverse .career-right::before {
-
-        display: none;
-    }
-
-
-    .career-left h3 {
-
-        font-size: 38px;
-    }
-}
-/* =========================
-   CONTACT SECTION
-========================= */
-.contact{
-    position:relative;
-    padding:120px 80px 5px;
-    min-height:auto;
-    background:#000;
-    
-}
-
-.contact-title{
-    position:relative;
-    z-index:2;
-
-    font-size:90px;
-    color:white;
-    font-family:'Bebas Neue',sans-serif;
-
-    margin-bottom:80px;
-}
-
-.contact-grid{
-    position:relative;
-    z-index:2;
-
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-
-    gap:120px;
-}
-
-.contact-label{
-    color:#c2185b;
-    letter-spacing:6px;
-    font-size:14px;
-}
-
-.contact-info h3{
-    color:white;
-    font-size:30px;
-    font-weight:400;
-
-    margin-bottom:50px;
-}
-
-.contact-social a{
-    display:block;
-
-    color:white;
-
-    text-decoration:none;
-
-    font-size:30px;
-
-    margin-bottom:20px;
-
-    padding-bottom:12px;
-
-    border-bottom:1px solid rgba(255,255,255,.15);
-
-    transition:.3s;
-}
-
-.contact-social a:hover{
-    color:#c2185b;
-    padding-left:10px;
-}
-
-.contact-end{
-    text-align:right;
-}
-
-.contact-end h3{
-    color:white;
-    font-size:30px;
-    font-weight:400;
-    white-space:nowrap;
-}
-
-.contact-end span{
-    color:#b10d48;
-}
-
-.contact-end p{
-    margin-top:20px;
-    
-
-    color:#666;
-
-    font-size:22px;
-}
-.contact::before{
-
-    content: "CONNECT";
-
-    position: absolute;
-
-    top: -50px;
-
-    right: 250px;
-
-    font-size: 180px;
-
-    font-family: 'Bebas Neue', sans-serif;
-
-    color: rgba(184, 31, 86, 0.12);
-
-    z-index: 0;
-
-    pointer-events: none;
-}
-.contact-bg{
-    position:absolute;
-    top:-70px;
-    right: 190px;
-
-    font-size:15vw;
-    font-family:'Bebas Neue',sans-serif;
-
-    color:rgba(120,0,40,.15);
-
-    z-index:0;
-    pointer-events:none;
-}
-/* =========================
-   FIXED NAVBAR
-========================= */
-
-.navbar{
-
-    position: fixed;
-
-    top: 0;
-
-    left: 0;
-
-    width: 100%;
-
-    height: 80px;
-
-    padding: 0 50px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    z-index: 9999;
-
-    background: rgba(0,0,0,.8);
-
-    backdrop-filter: blur(10px);
-
-    border-bottom:
-    1px solid rgba(184,31,86,.15);
-}
-
-.logo{
-
-    color: white;
-
-    font-size: 28px;
-
-    font-weight: 700;
-}
-
-.nav-email{
-
-    color: #cfcfcf;
-
-    font-size: 15px;
-}
-
-.navbar nav{
-
-    display: flex;
-
-    gap: 50px;
-}
-
-.navbar nav a{
-
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 2px;
-
-    transition: .3s;
-}
-
-.navbar nav a:hover{
-
-    color: #a31446;
-}
-
-
-/* =========================
-   FIXED SOCIAL BAR
-========================= */
-.social-icons a{
-
-    transition:.35s;
-
-}
-
-.social-icons a:hover{
-
-    color:#c2185b;
-
-    transform:scale(1.2);
-
-    text-shadow:0 0 20px #c2185b;
-
-}
-.social-fixed{
-
-    position: fixed;
-
-    left: 35px;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 35px;
-
-    z-index: 9999;
-}
-
-.social-fixed a{
-
-    color: white;
-
-    font-size: 30px;
-
-    transition: .3s;
-}
-
-.social-fixed a:hover{
-
-    color: #a31446;
-
-    transform: scale(1.15);
-}
-.nav a{
-
-    position:relative;
-
-}
-
-.nav a::after{
-
-    content:'';
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-6px;
-
-    width:0;
-
-    height:2px;
-
-    background:#c2185b;
-
-    transition:0.4s;
-
-}
-
-.nav a:hover::after{
-
-    width:100%;
-
-}
-.hidden{
-    opacity:0;
-    transform:translateY(80px);
-    transition:1s ease;
-}
-
-.show{
-    opacity:1;
-    transform:translateY(0);
-}
-.center-image{
-    opacity:0;
-    transform:scale(.8);
-    transition:1s ease;
-}
-
-.center-image.active{
-    opacity:1;
-    transform:scale(1);
-}
-.cursor-glow{
-    width:300px;
-    height:300px;
-    background:rgba(184,31,86,.15);
-    border-radius:50%;
-    position:fixed;
-    pointer-events:none;
-    transform:translate(-50%,-50%);
-    filter:blur(120px);
-    z-index:1;
-}
 /* =========================================================
-   MOBILE RESPONSIVE FIX
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-    /* =========================
-       BODY
-    ========================= */
-
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-    /* =========================
-       NAVBAR
-    ========================= */
-
-    .navbar {
-        height: 65px;
-        padding: 0 18px;
-        gap: 10px;
-    }
-
-    .logo {
-        font-size: 17px;
-        white-space: nowrap;
-    }
-
-    .nav-email {
-        display: none;
-    }
-
-    .navbar nav {
-        gap: 14px;
-        margin-left: auto;
-    }
-
-    .navbar nav a {
-        font-size: 9px;
-        letter-spacing: 0.8px;
-    }
-
-    /* =========================
-       SOCIAL BAR
-    ========================= */
-
-    .social-fixed {
-        left: 10px;
-        gap: 18px;
-    }
-
-    .social-fixed a {
-        font-size: 18px;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .intro {
-        min-height: 100svh;
-        height: auto;
-        padding: 100px 20px 50px;
-        text-align: center;
-    }
-
-    .top-line {
-        font-size: 8px;
-        letter-spacing: 2.5px;
-        margin-bottom: 25px;
-        max-width: 100%;
-    }
-
-    .intro h1,
-    .intro h2 {
-        font-size: 17vw;
-        line-height: 0.9;
-        letter-spacing: 2px;
-        margin: 0;
-    }
-
-    .intro h2 {
-        margin-bottom: 25px;
-    }
-
-    /* =========================
-       HERO BUTTONS
-    ========================= */
-
-    .hero-buttons {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        margin-top: 25px;
-    }
-
-    .btn {
-        width: 80%;
-        max-width: 280px;
-        padding: 13px 20px;
-        font-size: 11px;
-        letter-spacing: 1.2px;
-        text-align: center;
-    }
-
-    .scroll-line {
-        height: 45px;
-        margin-top: 30px;
-    }
-
-    .scroll-text {
-        font-size: 9px;
-        letter-spacing: 3px;
-    }
-
-    /* =========================
-       PORTFOLIO
-    ========================= */
-
-    .portfolio-container {
-        width: 100%;
-        height: 420px;
-        overflow: hidden;
-    }
-
-    .portfolio-text {
-        font-size: 25vw;
-        line-height: 1;
-        letter-spacing: -5px;
-        transform: scaleY(1.1);
-        white-space: nowrap;
-    }
-
-    .portfolio-text span {
-        -webkit-text-stroke: 2px white;
-    }
-
-    .center-image {
-        width: 90%;
-        max-width: 360px;
-        height: auto;
-        max-height: 300px;
-        object-fit: contain;
-        top: 70px;
-    }
-
-    .portfolio-details {
-        margin-top: 0;
-        padding: 0 20px 50px;
-        font-size: 11px;
-        line-height: 1.8;
-        letter-spacing: 0.8px;
-        text-align: center;
-    }
-
-    /* =========================
-       PROJECTS
-    ========================= */
-
-    .projects {
-        padding: 70px 15px;
-    }
-
-    .projects-heading {
-        margin-bottom: 40px;
-    }
-
-    .projects-heading h2 {
-        font-size: 15vw;
-        line-height: 0.9;
-        letter-spacing: -1px;
-    }
-
-    .projects-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .project-card {
-        width: 100%;
-        height: 430px;
-        border-radius: 16px;
-    }
-
-    .project-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .project-card .overlay {
-        padding: 25px 18px 18px;
-    }
-
-    .project-card .overlay p {
-        font-size: 8px;
-        letter-spacing: 1.2px;
-    }
-
-    .project-card .overlay h3 {
-        font-size: 25px;
-        line-height: 1;
-        margin-bottom: 10px;
-    }
-
-    .project-card .overlay span {
-        font-size: 11px;
-        line-height: 1.5;
-        margin-bottom: 16px;
-    }
-
-    .demo-btn {
-        padding: 8px 14px;
-        font-size: 9px;
-    }
-
-    /* =========================
-       TECH CORE
-    ========================= */
-
-    .tech-core {
-        min-height: 750px;
-        padding-top: 50px;
-    }
-
-    .tech-header {
-        margin-bottom: 20px;
-    }
-
-    .tech-header h2 {
-        font-size: 42px;
-    }
-
-    .core-container {
-        width: 1200px;
-        height: 700px;
-        transform: scale(0.42);
-        transform-origin: top center;
-        margin: 0 auto;
-    }
-
-    /* =========================
-       JOURNEY
-    ========================= */
-
-    .career {
-        padding: 70px 20px 80px;
-    }
-
-    .career-heading {
-        margin-bottom: 60px;
-    }
-
-    .career-heading p {
-        font-size: 11px;
-        letter-spacing: 4px;
-    }
-
-    .career-heading h2 {
-        font-size: 65px;
-    }
-
-    .career-line {
-        left: 20px;
-        top: 200px;
-        bottom: 60px;
-    }
-
-    .career-item,
-    .career-item.reverse {
-        display: block;
-        min-height: 0;
-        padding-left: 45px;
-        margin-bottom: 70px;
-    }
-
-    .career-left,
-    .career-item.reverse .career-left {
-        padding: 0 !important;
-        text-align: left;
-        max-width: none;
-        margin-bottom: 20px;
-    }
-
-    .career-right,
-    .career-item.reverse .career-right {
-        padding: 0 !important;
-        text-align: left;
-        max-width: none;
-        font-size: 14px;
-        line-height: 1.7;
-    }
-
-    .career-year {
-        display: none;
-    }
-
-    .career-left h3 {
-        font-size: 32px;
-    }
-
-    .badge {
-        font-size: 9px;
-        padding: 7px 14px;
-        letter-spacing: 2px;
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact {
-        padding: 70px 20px 40px;
-        min-height: auto;
-    }
-
-    .contact-title {
-        font-size: 65px;
-        margin-bottom: 45px;
-    }
-
-    .contact-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .contact-info h3 {
-        font-size: 18px;
-    }
-
-    .contact-label {
-        font-size: 10px;
-        letter-spacing: 4px;
-    }
-
-    .contact-social {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .contact-social a {
-        font-size: 18px;
-    }
-
-    .contact-end {
-        text-align: left;
-    }
-
-    .contact-end h3 {
-        font-size: 22px;
-        white-space: normal;
-    }
-
-    .contact-end p {
-        font-size: 14px;
-    }
-
-    /* =========================
-       REMOVE DESKTOP CURSOR GLOW
-       ========================= */
-
-    .cursor-glow {
-        display: none;
-    }
-
-    /* =========================
-       GRAIN
-       ========================= */
-
-    .grain {
-        opacity: 0.025;
-    }
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-    .navbar {
-        padding: 0 12px;
-    }
-
-    .logo {
-        font-size: 15px;
-    }
-
-    .navbar nav {
-        gap: 9px;
-    }
-
-    .navbar nav a {
-        font-size: 7px;
-        letter-spacing: 0.5px;
-    }
-
-    .intro h1,
-    .intro h2 {
-        font-size: 18vw;
-        letter-spacing: 1px;
-    }
-
-    .top-line {
-        font-size: 7px;
-        letter-spacing: 2px;
-    }
-
-    .btn {
-        width: 90%;
-    }
-
-    .portfolio-container {
-        height: 350px;
-    }
-
-    .portfolio-text {
-        font-size: 27vw;
-        letter-spacing: -6px;
-    }
-
-    .center-image {
-        width: 95%;
-        max-height: 260px;
-        top: 65px;
-    }
-
-    .portfolio-details {
-        font-size: 9px;
-    }
-
-    .projects-heading h2 {
-        font-size: 17vw;
-    }
-
-    .project-card {
-        height: 410px;
-    }
-
-    .tech-core {
-        min-height: 650px;
-    }
-
-    .core-container {
-        transform: scale(0.36);
-    }
-
-    .career-heading h2 {
-        font-size: 55px;
-    }
-
-    .career-left h3 {
-        font-size: 28px;
-    }
-
-    .contact-title {
-        font-size: 55px;
-    }
-}
-/* =========================================================
-   MOBILE RESPONSIVE FINAL FIX
+   TECH CORE — MOBILE RESPONSIVE
    ========================================================= */
 
 @media (max-width: 600px) {
 
-    /* -----------------------------------------------------
-       GENERAL
-       ----------------------------------------------------- */
-
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-    section {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-
-    /* =====================================================
-       1. TECH CORE
-       ===================================================== */
+    /* ---------- MAIN SECTION ---------- */
 
     .tech-core {
-        position: relative;
-        min-height: 700px;
-        width: 100%;
-        overflow: hidden;
-        padding: 90px 20px;
-    }
-
-    .tech-core h2,
-    .tech-core .section-title {
-        position: relative;
-        z-index: 10;
-        text-align: center;
-        font-size: 52px;
-        line-height: 1;
-        margin-bottom: 80px;
-    }
-
-    /* Make tech content visible */
-    .tech-core .tech-ball {
-        display: flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        position: absolute;
-        width: 65px;
-        height: 65px;
-        border-radius: 50%;
-        z-index: 5;
-    }
-
-    /* Arrange the balls across the mobile section */
-
-    .tech-core .tech-ball:nth-child(1) {
-        top: 180px;
-        left: 18%;
-    }
-
-    .tech-core .tech-ball:nth-child(2) {
-        top: 230px;
-        left: 55%;
-    }
-
-    .tech-core .tech-ball:nth-child(3) {
-        top: 330px;
-        left: 30%;
-    }
-
-    .tech-core .tech-ball:nth-child(4) {
-        top: 390px;
-        left: 68%;
-    }
-
-    .tech-core .tech-ball:nth-child(5) {
-        top: 480px;
-        left: 12%;
-    }
-
-    .tech-core .tech-ball:nth-child(6) {
-        top: 520px;
-        left: 48%;
+        position: relative !important;
+        width: 100% !important;
+        min-height: 1100px !important;
+        height: auto !important;
+        overflow: hidden !important;
+        padding: 100px 0 120px !important;
     }
 
 
-    /* If your tech content is inside another wrapper */
-    .tech-core .tech-container,
-    .tech-core .tech-grid,
-    .tech-core .tech-content {
-        position: relative;
-        min-height: 550px;
-        width: 100%;
-        display: block;
-        opacity: 1 !important;
-        visibility: visible !important;
+    /* ---------- HEADING ---------- */
+
+    .tech-header {
+        position: relative !important;
+        width: 100% !important;
+        text-align: center !important;
+        z-index: 20 !important;
+        margin: 0 0 30px !important;
+    }
+
+    .tech-header h2 {
+        position: relative !important;
+        display: block !important;
+
+        font-size: 48px !important;
+        line-height: 1 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        text-align: center !important;
+        white-space: nowrap !important;
+
+        z-index: 20 !important;
     }
 
 
-    /* =====================================================
-       2. PORTFOLIO
-       ===================================================== */
+    /* ---------- MAIN CONTAINER ---------- */
 
-    .portfolio {
-        position: relative;
-        width: 100%;
-        min-height: 750px;
-        overflow: hidden;
+    .core-container {
+        position: relative !important;
+
+        width: 100% !important;
+        height: 900px !important;
+
+        margin: 0 auto !important;
+
+        display: block !important;
+
+        overflow: visible !important;
     }
 
-    /* Image becomes smaller and stays behind the title */
 
-    .portfolio .center-image,
-    .portfolio .portfolio-image,
-    .portfolio img.center-image {
+    /* ---------- BACKGROUND GLOW ---------- */
+
+    .core-container > .core-glow {
         position: absolute !important;
 
-        width: 38% !important;
-        max-width: 170px !important;
-
-        height: auto !important;
-        max-height: 430px !important;
-
-        object-fit: contain !important;
-
         left: 50% !important;
-        top: 46% !important;
+        top: 50% !important;
+
+        width: 260px !important;
+        height: 260px !important;
 
         transform: translate(-50%, -50%) !important;
+
+        opacity: 0.5 !important;
 
         z-index: 1 !important;
     }
 
-    /* Portfolio title stays on top */
 
-    .portfolio .portfolio-text {
+    /* =====================================================
+       CIRCUIT
+       ===================================================== */
+
+    .circuit-lines {
         position: absolute !important;
 
         left: 50% !important;
-        top: 42% !important;
+        top: 50% !important;
 
         width: 100% !important;
+        height: 700px !important;
 
-        transform: translate(-50%, -50%) scaleY(1.15) !important;
+        transform: translate(-50%, -50%) !important;
 
-        text-align: center !important;
+        z-index: 2 !important;
 
-        font-size: clamp(58px, 16vw, 100px) !important;
-        line-height: 0.85 !important;
+        display: block !important;
 
-        white-space: nowrap;
-
-        z-index: 5 !important;
-
-        pointer-events: none;
+        pointer-events: none !important;
     }
 
-    /* University / education text */
-
-    .portfolio .portfolio-info,
-    .portfolio .portfolio-description {
-        position: absolute;
-        z-index: 6;
-
-        left: 50%;
-        bottom: 80px;
-
-        width: 90%;
-
-        transform: translateX(-50%);
-
-        text-align: center;
-
-        font-size: 13px;
-        line-height: 1.8;
-        letter-spacing: 2px;
+    .circuit-lines path {
+        vector-effect: non-scaling-stroke !important;
     }
 
 
     /* =====================================================
-       3. JOURNEY / EXPERIENCE
-       KEEP DESKTOP ZIG-ZAG ON MOBILE
+       AI PROCESSOR — CENTER
        ===================================================== */
 
-    .career {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        padding: 100px 0 140px;
-    }
-
-    /* Center vertical line */
-
-    .career-line {
+    .core-card {
         position: absolute !important;
 
-        top: 0;
-        bottom: 0;
-
         left: 50% !important;
+        top: 50% !important;
 
-        width: 2px !important;
+        width: 150px !important;
+        height: 150px !important;
 
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%) !important;
 
-        z-index: 1;
-    }
+        z-index: 10 !important;
 
-
-    /* Every journey item remains two-sided */
-
-    .career-item,
-    .career-item.reverse {
-        position: relative;
-
-        width: 100% !important;
-
-        min-height: 280px;
-
-        display: grid !important;
-
-        grid-template-columns: 1fr 1fr !important;
-
-        align-items: center;
-
-        margin-bottom: 70px;
-
-        padding: 0 !important;
-    }
-
-
-    /* Normal item */
-
-    .career-item:not(.reverse) .career-left {
-        grid-column: 1;
-        text-align: right;
-
-        padding: 0 25px 0 15px;
-    }
-
-    .career-item:not(.reverse) .career-right {
-        grid-column: 2;
-        text-align: left;
-
-        padding: 0 15px 0 25px;
-    }
-
-
-    /* Reverse item */
-
-    .career-item.reverse .career-left {
-        grid-column: 2;
-        grid-row: 1;
-
-        text-align: left;
-
-        padding: 0 15px 0 25px;
-    }
-
-    .career-item.reverse .career-right {
-        grid-column: 1;
-        grid-row: 1;
-
-        text-align: right;
-
-        padding: 0 25px 0 15px;
-    }
-
-
-    /* Make sure the zig-zag content stays visible */
-
-    .career-left,
-    .career-right {
-        position: relative;
-
-        width: 100% !important;
-
-        min-width: 0;
-
-        z-index: 3;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
 
         opacity: 1 !important;
         visibility: visible !important;
     }
 
 
-    /* Journey headings */
+    .core-center {
+        position: absolute !important;
 
-    .career-left h2,
-    .career-right h2,
-    .career-left h3,
-    .career-right h3 {
-        font-size: clamp(17px, 5vw, 27px) !important;
+        left: 50% !important;
+        top: 50% !important;
 
-        line-height: 1.05;
+        transform: translate(-50%, -50%) !important;
 
-        margin: 10px 0;
+        width: 65px !important;
+        height: 65px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        z-index: 15 !important;
+
+        font-size: 22px !important;
     }
 
 
-    /* Journey descriptions */
-
-    .career-left p,
-    .career-right p {
-        font-size: 12px !important;
-
-        line-height: 1.7;
-
-        margin: 12px 0;
-
-        max-width: 160px;
+    .core-ring {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
 
-    /* Keep labels small */
-
-    .career-label,
-    .career-tag,
-    .career-item span {
-        font-size: 9px !important;
-
-        letter-spacing: 3px;
-    }
-
-
-    /* Numbers */
-
-    .career-number {
-        font-size: 35px !important;
+    .pulse {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
 
     /* =====================================================
-       SOCIAL SIDEBAR
+       TECH NODES
        ===================================================== */
 
-    .social-sidebar {
-        left: 18px !important;
+    .node {
+        position: absolute !important;
 
-        z-index: 50;
+        width: 125px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        text-align: center !important;
+
+        z-index: 15 !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+
+        transform: none !important;
     }
 
-    .social-sidebar a {
-        font-size: 25px;
+
+    .node img {
+        width: 45px !important;
+        height: 45px !important;
+
+        object-fit: contain !important;
+
+        display: block !important;
+
+        margin: 0 auto 8px !important;
+    }
+
+
+    .node h3 {
+        margin: 0 !important;
+
+        font-size: 13px !important;
+
+        line-height: 1.2 !important;
+
+        text-align: center !important;
+    }
+
+
+    .node span {
+        display: block !important;
+
+        margin-top: 5px !important;
+
+        font-size: 8px !important;
+
+        line-height: 1.2 !important;
+
+        text-align: center !important;
+
+        opacity: 0.7 !important;
     }
 
 
     /* =====================================================
-       BACK TO TOP
+       NODE POSITIONS
+       
+       8 nodes arranged around the AI processor
        ===================================================== */
 
-    .back-to-top {
-        width: 55px !important;
-        height: 55px !important;
 
-        right: 20px !important;
-        bottom: 25px !important;
+    /* 1 — PYTHON */
+
+    .node-python {
+        top: 45px !important;
+        left: 50% !important;
+
+        transform: translateX(-50%) !important;
+    }
+
+
+    /* 2 — SENTIMENT ANALYSIS */
+
+    .node-sentiment {
+        top: 205px !important;
+        left: 5% !important;
+    }
+
+
+    /* 3 — GIT */
+
+    .node-git {
+        top: 205px !important;
+        right: 5% !important;
+        left: auto !important;
+    }
+
+
+    /* 4 — NUMPY */
+
+    .node-numpy {
+        top: 410px !important;
+        left: 2% !important;
+    }
+
+
+    /* 5 — PANDAS */
+
+    .node-pandas {
+        top: 410px !important;
+        right: 2% !important;
+        left: auto !important;
+    }
+
+
+    /* 6 — DATA ANALYSIS */
+
+    .node-analysis {
+        top: 610px !important;
+        left: 5% !important;
+    }
+
+
+    /* 7 — VISUALIZATION */
+
+    .node-visualization {
+        top: 610px !important;
+        right: 5% !important;
+        left: auto !important;
+    }
+
+
+    /* 8 — OCR */
+
+    .node-ocr {
+        top: 785px !important;
+        left: 50% !important;
+
+        transform: translateX(-50%) !important;
+    }
+
+
+    /* =====================================================
+       PREVENT OTHER MOBILE CSS FROM HIDING TECH CONTENT
+       ===================================================== */
+
+    .tech-core .node,
+    .tech-core .core-card,
+    .tech-core .circuit-lines,
+    .tech-core .core-glow {
+        visibility: visible !important;
     }
 
 }
