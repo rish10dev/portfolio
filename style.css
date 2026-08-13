@@ -2803,38 +2803,25 @@ section {
     z-index:1;
 }
 /* =========================================================
-   FINAL MOBILE RESPONSIVE
-   DESKTOP-STYLE PORTFOLIO
+   MOBILE RESPONSIVE FIX
+   KEEP DESKTOP DESIGN UNCHANGED
    ========================================================= */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     /* =====================================================
        GLOBAL
        ===================================================== */
 
-    html {
-        width: 100%;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-    }
-
+    html,
     body {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
     }
 
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-    }
-
-    img,
-    video,
-    canvas {
-        max-width: 100%;
+    body {
+        margin: 0;
     }
 
     section {
@@ -2848,59 +2835,150 @@ section {
        NAVBAR
        ===================================================== */
 
-    nav {
+    header,
+    nav,
+    .navbar,
+    .nav,
+    .navigation {
         width: 100%;
-        height: auto;
-        min-height: 65px;
-
-        padding: 15px 18px;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        gap: 12px;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
-    nav .logo {
-        font-size: 18px;
-        flex-shrink: 0;
-        white-space: nowrap;
+    header {
+        position: relative;
+        z-index: 1000;
     }
 
-    .nav-links {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+    .navbar,
+    nav {
+        min-height: 72px;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        padding: 12px 18px !important;
 
         gap: 10px;
-
-        flex-wrap: nowrap;
     }
 
-    .nav-links a {
-        font-size: 8px;
-        letter-spacing: 1px;
+    /* NAME */
+
+    .logo,
+    .navbar-brand,
+    .brand {
+        flex: 0 0 auto;
+
+        font-size: 25px !important;
+        line-height: 1.05 !important;
+
+        max-width: 145px;
+
+        white-space: normal !important;
+    }
+
+    /* EMAIL */
+
+    .nav-email,
+    .navbar-email,
+    .email {
+        flex: 1 1 auto;
+
+        text-align: center;
+
+        font-size: 10px !important;
+
         white-space: nowrap;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        opacity: .75;
+    }
+
+    /* NAV LINKS */
+
+    .nav-links,
+    .navbar-links,
+    nav ul {
+        flex: 0 0 auto;
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: center !important;
+        justify-content: flex-end !important;
+
+        gap: 12px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        list-style: none;
+    }
+
+    .nav-links a,
+    .navbar-links a,
+    nav ul li a {
+        display: block !important;
+
+        width: auto !important;
+        height: auto !important;
+
+        writing-mode: horizontal-tb !important;
+        text-orientation: mixed !important;
+
+        transform: none !important;
+
+        font-size: 8px !important;
+        letter-spacing: 1px !important;
+
+        white-space: nowrap !important;
     }
 
 
     /* =====================================================
-       LEFT SOCIAL NAV
+       LEFT SOCIAL BAR
        ===================================================== */
 
     .social-sidebar,
-    .social-nav {
-        z-index: 100;
-    }
+    .socials,
+    .social-links,
+    .side-social {
+        position: fixed !important;
 
-    .social-sidebar {
-        left: 7px;
+        left: 12px !important;
+        bottom: 80px !important;
+        top: auto !important;
+
+        width: auto !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: center !important;
+
+        gap: 24px !important;
+
+        z-index: 900 !important;
     }
 
     .social-sidebar a,
-    .social-nav a {
-        font-size: 15px;
+    .socials a,
+    .social-links a,
+    .side-social a {
+        display: flex !important;
+
+        width: 28px !important;
+        height: 28px !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        font-size: 22px !important;
     }
 
 
@@ -2908,216 +2986,290 @@ section {
        HERO
        ===================================================== */
 
-    .hero {
+    .hero,
+    #home,
+    .home {
         width: 100%;
-        min-height: 100svh;
+        min-height: calc(100svh - 72px);
 
-        padding: 90px 22px 70px;
+        padding: 40px 20px 60px !important;
+
+        box-sizing: border-box;
 
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
 
         overflow: hidden;
     }
 
-    .hero-content {
-        width: 100%;
-        max-width: 100%;
+    .hero h1,
+    .hero-title,
+    .hero-heading {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 auto !important;
+
+        text-align: center !important;
+
+        font-size: clamp(58px, 17vw, 125px) !important;
+
+        line-height: .82 !important;
+
+        letter-spacing: -.045em !important;
+
+        white-space: normal !important;
+
+        overflow-wrap: normal;
+        word-break: normal;
     }
 
-    .hero h1 {
-        width: 100%;
-        max-width: 100%;
-
-        font-size: clamp(52px, 16vw, 105px);
-
-        line-height: .84;
-        letter-spacing: -2px;
-
-        overflow-wrap: anywhere;
+    .hero h1 span,
+    .hero-title span,
+    .hero-heading span {
+        display: inline !important;
     }
 
-    .hero p {
+    .hero p,
+    .hero-subtitle {
         max-width: 90%;
-
-        font-size: 12px;
-        line-height: 1.6;
-    }
-
-    .hero-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .hero-buttons a,
-    .hero button {
-        max-width: 100%;
-    }
-
-
-    /* =====================================================
-       ABOUT / INTRO
-       ===================================================== */
-
-    .about {
-        width: 100%;
-
-        padding: 80px 22px;
-
-        overflow: hidden;
-    }
-
-    .about-grid {
-        width: 100%;
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        gap: 25px;
-    }
-
-    .about h2 {
-        font-size: clamp(45px, 13vw, 90px);
-        line-height: .88;
-    }
-
-    .about p {
-        font-size: 12px;
-        line-height: 1.7;
-    }
-
-
-    /* =====================================================
-       FEATURED WORK / PROJECTS
-       ===================================================== */
-
-    #projects,
-    .projects {
-        width: 100%;
-
-        padding: 85px 18px;
-
-        overflow: hidden;
-    }
-
-    .projects-heading {
-        width: 100%;
 
         text-align: center;
 
-        margin-bottom: 45px;
+        font-size: 11px !important;
+
+        line-height: 1.6 !important;
     }
 
-    .projects-heading p {
-        font-size: 9px;
-        letter-spacing: 3px;
-    }
-
-    .projects-heading h2 {
-        font-size: clamp(48px, 14vw, 90px);
-        line-height: .85;
-
-        margin: 0;
-    }
-
-
-    /* Keep cards full-width but not distorted */
-
-    .projects-grid {
+    .hero-buttons,
+    .hero-actions {
         width: 100%;
 
-        display: grid;
-
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-    }
-
-    .project-card {
-        position: relative;
-
-        width: 100%;
-        max-width: 100%;
-
-        overflow: hidden;
-    }
-
-    .project-card img {
-        display: block;
-
-        width: 100%;
-
-        aspect-ratio: 16 / 10;
-
-        object-fit: cover;
-    }
-
-
-    /* Project overlay */
-
-    .project-card .overlay {
-        width: 100%;
-        max-width: 100%;
-
-        padding: 18px;
-
-        overflow: hidden;
-    }
-
-    .project-card .overlay p {
-        font-size: 9px;
-        letter-spacing: 2px;
-    }
-
-    .project-card .overlay h3 {
-        font-size: clamp(22px, 7vw, 34px);
-
-        line-height: 1;
-
-        overflow-wrap: anywhere;
-    }
-
-    .project-card .overlay span {
-        display: block;
-
-        max-width: 100%;
-
-        font-size: 10px;
-        line-height: 1.55;
-    }
-
-
-    /* Live demo */
-
-    .project-buttons {
         display: flex;
-        flex-wrap: wrap;
-
-        gap: 8px;
-
-        margin-top: 15px;
-    }
-
-    .demo-btn {
-        display: inline-flex;
+        flex-direction: column;
 
         align-items: center;
-        justify-content: center;
 
-        min-height: 38px;
+        gap: 12px;
 
-        padding: 9px 16px;
+        margin-top: 25px;
+    }
 
-        font-size: 10px;
+    .hero-buttons a,
+    .hero-actions a {
+        width: min(85%, 360px);
 
-        white-space: nowrap;
+        box-sizing: border-box;
+
+        text-align: center;
+
+        padding: 16px 20px !important;
+
+        font-size: 10px !important;
+
+        letter-spacing: 2px;
     }
 
 
     /* =====================================================
-       JOURNEY / EXPERIENCE
-       DESKTOP-STYLE ZIG ZAG
+       ABOUT
+       ===================================================== */
+
+    #about,
+    .about {
+        width: 100%;
+
+        padding: 80px 20px !important;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    .about-container,
+    .about-content {
+        width: 100%;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: center !important;
+
+        gap: 35px !important;
+    }
+
+    .about-image,
+    .about-photo {
+        width: min(78vw, 330px) !important;
+
+        max-width: 330px !important;
+
+        margin: 0 auto !important;
+    }
+
+    .about-image img,
+    .about-photo img {
+        width: 100% !important;
+        height: auto !important;
+
+        max-height: 480px;
+
+        object-fit: contain !important;
+
+        display: block;
+    }
+
+    .about-text {
+        width: 100% !important;
+
+        max-width: 520px;
+
+        text-align: left;
+    }
+
+    .about-text h2,
+    .about-title {
+        font-size: clamp(42px, 12vw, 75px) !important;
+
+        line-height: .9 !important;
+
+        margin-bottom: 25px;
+    }
+
+    .about-text p {
+        font-size: 12px !important;
+
+        line-height: 1.7 !important;
+    }
+
+
+    /* =====================================================
+       PORTFOLIO / PROJECTS
+       ===================================================== */
+
+    #projects,
+    .projects,
+    .portfolio {
+        width: 100%;
+
+        padding: 80px 18px !important;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    .projects-grid,
+    .project-grid,
+    .portfolio-grid {
+        width: 100% !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        gap: 30px !important;
+    }
+
+    .project-card,
+    .project,
+    .portfolio-card {
+        position: relative !important;
+
+        width: 100% !important;
+
+        height: 310px !important;
+
+        min-height: 310px !important;
+
+        max-height: 310px !important;
+
+        overflow: hidden !important;
+
+        box-sizing: border-box;
+    }
+
+    .project-card img,
+    .project img,
+    .portfolio-card img {
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        object-fit: cover !important;
+
+        object-position: center !important;
+
+        display: block !important;
+    }
+
+    .project-card::after,
+    .project::after,
+    .portfolio-card::after {
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        background:
+            linear-gradient(
+                to top,
+                rgba(0, 0, 0, .88),
+                rgba(0, 0, 0, .15) 70%,
+                transparent
+            );
+
+        z-index: 1;
+    }
+
+    .project-card .overlay,
+    .project-card .project-info,
+    .project .project-info,
+    .portfolio-card .project-info {
+        position: absolute !important;
+
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+
+        z-index: 2 !important;
+
+        padding: 20px !important;
+
+        box-sizing: border-box;
+    }
+
+    .project-card h3,
+    .project h3,
+    .portfolio-card h3 {
+        font-size: 25px !important;
+
+        line-height: 1 !important;
+
+        margin: 5px 0 8px !important;
+    }
+
+    .project-card p,
+    .project p,
+    .portfolio-card p {
+        font-size: 10px !important;
+
+        line-height: 1.5 !important;
+
+        max-width: 90%;
+    }
+
+
+    /* =====================================================
+       JOURNEY
        ===================================================== */
 
     #journey,
@@ -3126,262 +3278,205 @@ section {
 
         width: 100%;
 
-        padding: 90px 5px 100px;
+        padding: 90px 0 100px !important;
+
+        box-sizing: border-box;
 
         overflow: hidden;
     }
 
 
-    /* Journey heading */
+    /* JOURNEY TITLE */
 
-    .career-heading {
+    .career-title,
+    .journey-title {
         width: 100%;
 
         text-align: center;
 
-        padding: 0 10px;
-
-        margin-bottom: 70px;
+        margin-bottom: 60px;
     }
 
-    .career-heading p {
-        font-size: 9px;
-        letter-spacing: 3px;
-    }
+    .career-title h2,
+    .journey-title h2 {
+        font-size: clamp(55px, 16vw, 100px) !important;
 
-    .career-heading h2 {
-        width: 100%;
-
-        font-size: clamp(55px, 17vw, 105px);
-
-        line-height: .82;
-
-        letter-spacing: -2px;
-
-        overflow-wrap: anywhere;
+        line-height: .85 !important;
     }
 
 
-    /* =====================================================
-       CENTER LINE
-       ===================================================== */
+    /* CENTER LINE */
 
     .career-line {
-        position: absolute;
+        position: absolute !important;
 
-        top: 260px;
-        bottom: 80px;
+        left: 50% !important;
 
-        left: 50%;
+        top: 190px !important;
 
-        width: 1px;
+        bottom: 80px !important;
 
-        transform: translateX(-50%);
+        width: 1px !important;
 
-        background: rgba(128, 0, 32, .6);
+        transform: translateX(-50%) !important;
 
-        z-index: 1;
+        background: rgba(190, 0, 60, .65) !important;
 
-        pointer-events: none;
+        z-index: 1 !important;
     }
 
 
-    /* Moving burgundy glow */
+    /* GLOW */
 
     .career-glow {
-        width: 14px;
-        height: 14px;
+        position: absolute !important;
 
-        background: #800020;
+        left: 50% !important;
 
-        box-shadow:
-            0 0 7px #800020,
-            0 0 16px #800020,
-            0 0 28px rgba(128, 0, 32, .7);
+        transform: translateX(-50%) !important;
+
+        z-index: 5 !important;
     }
 
 
-    /* =====================================================
-       TIMELINE ITEMS
-       ===================================================== */
+    /* EVERY JOURNEY ITEM */
 
     .career-item,
     .career-item.reverse {
+        position: relative !important;
 
-        position: relative;
+        width: 100% !important;
 
-        width: 100%;
+        min-height: 260px !important;
 
-        min-height: 245px;
+        margin: 0 !important;
 
-        display: grid;
+        padding: 25px 0 !important;
 
-        grid-template-columns:
-            minmax(0, 1fr)
-            50px
-            minmax(0, 1fr);
+        display: grid !important;
 
-        align-items: center;
+        grid-template-columns: minmax(0, 1fr) 38px minmax(0, 1fr) !important;
 
-        margin: 0;
+        align-items: center !important;
+
+        box-sizing: border-box;
+    }
+
+
+    /* NORMAL:
+       LEFT → CENTER → RIGHT */
+
+    .career-item:not(.reverse) .career-left {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+
+        text-align: right !important;
+
+        padding: 10px 12px 10px 18px !important;
+    }
+
+    .career-item:not(.reverse) .career-right {
+        grid-column: 3 !important;
+        grid-row: 1 !important;
+
+        text-align: left !important;
+
+        padding: 10px 18px 10px 12px !important;
+    }
+
+
+    /* REVERSE:
+       RIGHT → CENTER → LEFT */
+
+    .career-item.reverse .career-left {
+        grid-column: 3 !important;
+        grid-row: 1 !important;
+
+        text-align: left !important;
+
+        padding: 10px 18px 10px 12px !important;
+    }
+
+    .career-item.reverse .career-right {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+
+        text-align: right !important;
+
+        padding: 10px 12px 10px 18px !important;
+    }
+
+
+    /* CENTER NUMBER */
+
+    .career-item::before {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        width: 30px;
+        height: 30px;
+
+        transform: translate(-50%, -50%);
+
+        border-radius: 50%;
+
+        background: #050505;
+
+        border: 1px solid rgba(190, 0, 60, .8);
 
         z-index: 2;
     }
 
-
-    /* =====================================================
-       CENTER NUMBER
-       ===================================================== */
-
-    .career-year {
-
+    .career-number,
+    .career-item .number {
         grid-column: 2 !important;
         grid-row: 1 !important;
 
-        width: 50px;
+        position: relative !important;
 
-        text-align: center;
+        z-index: 5 !important;
 
-        font-family: 'Bebas Neue', sans-serif;
+        text-align: center !important;
 
-        font-size: 30px;
+        font-size: 13px !important;
 
-        line-height: 1;
-
-        color: #d9d9d9;
-
-        z-index: 10;
+        line-height: 1 !important;
     }
 
 
-    /* =====================================================
-       NORMAL
-       LEFT CONTENT → 01 → RIGHT DESCRIPTION
-       ===================================================== */
+    /* JOURNEY HEADINGS */
 
-    .career-item:not(.reverse) .career-left {
+    .career-left h3,
+    .career-right h3 {
+        font-size: clamp(14px, 4vw, 23px) !important;
 
-        grid-column: 1;
-        grid-row: 1;
+        line-height: 1.05 !important;
 
-        width: 100%;
-
-        padding: 10px 12px 10px 8px;
-
-        text-align: right;
-
-        justify-self: stretch;
+        margin: 8px 0 !important;
     }
 
-    .career-item:not(.reverse) .career-right {
+    .career-left p,
+    .career-right p {
+        font-size: 9px !important;
 
-        grid-column: 3;
-        grid-row: 1;
+        line-height: 1.55 !important;
 
-        width: 100%;
-
-        padding: 10px 8px 10px 12px;
-
-        text-align: left;
-
-        justify-self: stretch;
+        margin: 0 !important;
     }
 
-
-    /* =====================================================
-       REVERSE
-       LEFT DESCRIPTION → 02 → RIGHT CONTENT
-       ===================================================== */
-
-    .career-item.reverse .career-right {
-
-        grid-column: 1;
-        grid-row: 1;
-
-        width: 100%;
-
-        padding: 10px 12px 10px 8px;
-
-        text-align: right;
-
-        justify-self: stretch;
-    }
-
-    .career-item.reverse .career-left {
-
-        grid-column: 3;
-        grid-row: 1;
-
-        width: 100%;
-
-        padding: 10px 8px 10px 12px;
-
-        text-align: left;
-
-        justify-self: stretch;
-    }
-
-
-    /* =====================================================
-       JOURNEY TITLES
-       ===================================================== */
-
-    .career-left h3 {
-
-        margin: 8px 0;
-
-        font-size: clamp(17px, 4.8vw, 27px);
-
-        line-height: 1.02;
-
-        letter-spacing: 0;
-
-        overflow-wrap: anywhere;
-    }
-
-    .career-left span {
-
-        display: block;
-
-        font-size: 8px;
-
-        line-height: 1.4;
-    }
-
-
-    /* =====================================================
-       JOURNEY DESCRIPTIONS
-       ===================================================== */
-
-    .career-right {
-
-        max-width: 100%;
-
-        font-size: 10px;
-
-        line-height: 1.6;
-
-        color: #cfcfcf;
-
-        overflow-wrap: anywhere;
-    }
-
-
-    /* =====================================================
-       BADGES
-       ===================================================== */
-
-    .career-left .badge {
-
+    .career-left .badge,
+    .career-right .badge {
         display: inline-block;
 
         max-width: 100%;
 
-        padding: 6px 9px;
+        font-size: 6px !important;
 
-        margin-bottom: 7px;
-
-        font-size: 6.5px;
+        padding: 6px 8px !important;
 
         letter-spacing: 1.5px;
 
@@ -3390,439 +3485,253 @@ section {
 
 
     /* =====================================================
-       REMOVE UNWANTED HORIZONTAL CONNECTORS
-       ===================================================== */
-
-    .career-left::after,
-    .career-right::before,
-    .career-item.reverse .career-left::after,
-    .career-item.reverse .career-right::before {
-
-        display: none !important;
-    }
-
-
-    /* =====================================================
-       SKILLS / TECH CORE
-       ===================================================== */
-
-    #skills,
-    .skills,
-    .tech-core {
-
-        width: 100%;
-
-        padding: 85px 18px;
-
-        overflow: hidden;
-    }
-
-    .skills-grid,
-    .tech-grid {
-
-        width: 100%;
-
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 15px;
-    }
-
-    .skill-item,
-    .tech-item {
-
-        min-width: 0;
-
-        width: 100%;
-    }
-
-    .skill-item h3,
-    .tech-item h3 {
-
-        font-size: clamp(22px, 6vw, 35px);
-
-        line-height: 1;
-    }
-
-
-    /* =====================================================
        CONTACT
-       DESKTOP-LIKE 3 COLUMNS
        ===================================================== */
 
     #contact,
-    .contact-section {
-
+    .contact {
         position: relative;
 
         width: 100%;
 
         min-height: 100svh;
 
-        padding: 100px 18px 60px;
+        padding: 90px 20px 80px !important;
 
-        display: flex;
-
-        align-items: center;
+        box-sizing: border-box;
 
         overflow: hidden;
     }
 
+    .contact-grid {
+        width: 100% !important;
 
-    /* Contact decorative CONNECT */
-
-    .contact-section::after {
-
-        content: "CONNECT";
-
-        position: absolute;
-
-        top: 80px;
-        right: -25px;
-
-        font-family: 'Bebas Neue', sans-serif;
-
-        font-size: clamp(110px, 28vw, 200px);
-
-        line-height: .8;
-
-        letter-spacing: -5px;
-
-        color: rgba(128, 0, 32, .10);
-
-        white-space: nowrap;
-
-        pointer-events: none;
-
-        z-index: 0;
-    }
-
-
-    /* =====================================================
-       CONTACT CONTAINER
-       ===================================================== */
-
-    .contact-container {
-
-        position: relative;
-
-        z-index: 2;
-
-        width: 100%;
-
-        max-width: 100%;
-
-        display: grid;
+        display: grid !important;
 
         grid-template-columns:
             minmax(0, 1.15fr)
-            minmax(0, .85fr)
-            minmax(0, 1fr);
+            minmax(0, .85fr) !important;
 
-        gap: 18px;
+        grid-template-areas:
+            "info social"
+            "credit credit" !important;
 
-        align-items: start;
+        gap: 45px 25px !important;
+
+        align-items: start !important;
     }
 
 
     /* LEFT */
 
     .contact-info {
+        grid-area: info !important;
 
-        min-width: 0;
+        min-width: 0 !important;
 
-        text-align: left;
+        text-align: left !important;
     }
 
+    .contact-info h2,
+    .contact-title {
+        font-size: clamp(48px, 14vw, 85px) !important;
 
-    .contact-info h2 {
+        line-height: .8 !important;
 
-        font-size: clamp(38px, 11vw, 70px);
-
-        line-height: .85;
-
-        letter-spacing: -2px;
-
-        margin: 0 0 30px;
+        margin: 0 0 35px !important;
 
         white-space: nowrap;
-    }
-
-
-    /* Email/location */
-
-    .contact-detail {
-
-        margin-bottom: 22px;
-
-        max-width: 100%;
     }
 
     .contact-label {
+        font-size: 7px !important;
 
-        display: block;
+        letter-spacing: 3px !important;
 
-        margin-bottom: 7px;
-
-        font-size: 7px;
-
-        letter-spacing: 2px;
-
-        color: #888;
+        margin: 0 0 7px !important;
     }
 
-    .contact-detail a,
-    .contact-detail p {
+    .contact-info h3,
+    .contact-info h4 {
+        font-size: clamp(15px, 4.5vw, 25px) !important;
 
-        display: block;
+        line-height: 1.15 !important;
 
-        max-width: 100%;
-
-        font-size: 10px;
-
-        line-height: 1.4;
-
-        color: #e8e8e8;
+        margin: 0 0 28px !important;
 
         overflow-wrap: anywhere;
     }
 
 
-    /* =====================================================
-       CENTER SOCIAL
-       ===================================================== */
+    /* SOCIAL */
 
     .contact-social {
+        grid-area: social !important;
 
-        min-width: 0;
+        min-width: 0 !important;
 
-        padding-top: 10px;
+        display: flex !important;
 
-        display: flex;
+        flex-direction: column !important;
 
-        flex-direction: column;
+        align-items: stretch !important;
 
-        align-items: flex-start;
+        padding-top: 5px;
     }
 
     .contact-social a {
+        display: block !important;
 
-        width: 100%;
+        width: 100% !important;
 
-        max-width: 130px;
+        padding: 9px 0 !important;
 
-        padding: 7px 0;
+        font-size: 12px !important;
 
-        font-size: 10px;
+        line-height: 1.2 !important;
 
-        display: flex;
+        white-space: nowrap !important;
 
-        justify-content: space-between;
-
-        gap: 5px;
-
-        white-space: nowrap;
-
-        border-bottom: 1px solid rgba(255,255,255,.25);
+        border-bottom: 1px solid rgba(255,255,255,.15);
     }
 
 
-    /* =====================================================
-       RIGHT CREDIT
-       ===================================================== */
+    /* CREDIT */
 
     .contact-credit {
+        grid-area: credit !important;
 
-        min-width: 0;
+        width: 100% !important;
 
-        padding-top: 10px;
+        text-align: center !important;
 
-        text-align: right;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: flex-end;
+        padding-top: 20px;
     }
 
     .contact-credit p {
+        font-size: 11px !important;
 
-        max-width: 100%;
+        line-height: 1.5 !important;
 
         margin: 0;
-
-        font-size: 10px;
-
-        line-height: 1.5;
-
-        color: #ddd;
     }
 
-    .contact-credit strong {
-
-        color: #800020;
-
-        font-weight: 400;
-    }
-
+    .contact-credit .copyright,
     .copyright {
+        margin-top: 18px;
 
-        margin-top: 25px;
-
-        font-size: 9px;
-
-        color: #777;
+        font-size: 9px !important;
     }
 
 
     /* =====================================================
-       SMALL BUTTONS / LINKS
+       BACK TO TOP
        ===================================================== */
 
-    a,
-    button {
+    .back-to-top,
+    #backToTop {
+        position: fixed !important;
 
-        max-width: 100%;
+        right: 18px !important;
+        bottom: 72px !important;
 
-        overflow-wrap: anywhere;
+        width: 42px !important;
+        height: 42px !important;
+
+        z-index: 1000 !important;
     }
 
 }
 
 
 /* =========================================================
-   VERY SMALL PHONES — 360/375px
+   EXTRA SMALL PHONES
    ========================================================= */
 
-@media (max-width: 420px) {
+@media screen and (max-width: 420px) {
 
-    /* NAV */
-
+    .navbar,
     nav {
-        padding-left: 12px;
-        padding-right: 12px;
+        padding: 10px 12px !important;
     }
 
-    nav .logo {
-        font-size: 16px;
+    .logo,
+    .navbar-brand,
+    .brand {
+        font-size: 21px !important;
+        max-width: 105px;
     }
 
-    .nav-links {
-        gap: 7px;
+    .nav-email,
+    .navbar-email {
+        font-size: 8px !important;
     }
 
-    .nav-links a {
-        font-size: 7px;
-        letter-spacing: .5px;
+    .nav-links,
+    .navbar-links,
+    nav ul {
+        gap: 7px !important;
     }
 
-
-    /* PROJECTS */
-
-    #projects,
-    .projects {
-        padding-left: 14px;
-        padding-right: 14px;
-    }
-
-    .project-card .overlay {
-        padding: 14px;
+    .nav-links a,
+    .navbar-links a,
+    nav ul li a {
+        font-size: 6px !important;
+        letter-spacing: .5px !important;
     }
 
 
-    /* JOURNEY */
+    /* Hero */
 
-    #journey,
-    .career {
-        padding-left: 1px;
-        padding-right: 1px;
+    .hero h1,
+    .hero-title,
+    .hero-heading {
+        font-size: clamp(50px, 16vw, 80px) !important;
     }
+
+
+    /* Journey */
 
     .career-item,
     .career-item.reverse {
-
         grid-template-columns:
             minmax(0, 1fr)
-            42px
-            minmax(0, 1fr);
+            32px
+            minmax(0, 1fr) !important;
 
-        min-height: 225px;
+        min-height: 230px !important;
     }
 
-    .career-year {
-        width: 42px;
-        font-size: 24px;
-    }
-
-    .career-item:not(.reverse) .career-left {
-        padding-right: 8px;
-    }
-
-    .career-item:not(.reverse) .career-right {
-        padding-left: 8px;
-    }
-
+    .career-item:not(.reverse) .career-left,
     .career-item.reverse .career-right {
-        padding-right: 8px;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
     }
 
+    .career-item:not(.reverse) .career-right,
     .career-item.reverse .career-left {
-        padding-left: 8px;
-    }
-
-    .career-left h3 {
-        font-size: 14px;
-    }
-
-    .career-right {
-        font-size: 8.5px;
-        line-height: 1.5;
-    }
-
-    .career-left .badge {
-        font-size: 5.5px;
-        padding: 5px 7px;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
     }
 
 
-    /* CONTACT */
+    /* Contact */
 
-    #contact,
-    .contact-section {
-        padding-left: 10px;
-        padding-right: 10px;
+    .contact-grid {
+        gap: 35px 15px !important;
     }
 
-    .contact-container {
-        gap: 10px;
+    .contact-info h2,
+    .contact-title {
+        font-size: clamp(40px, 13vw, 65px) !important;
     }
 
-    .contact-info h2 {
-        font-size: 9.5vw;
-    }
-
-    .contact-detail a,
-    .contact-detail p {
-        font-size: 8px;
-    }
-
-    .contact-label {
-        font-size: 5.5px;
-        letter-spacing: 1.5px;
+    .contact-info h3,
+    .contact-info h4 {
+        font-size: 14px !important;
     }
 
     .contact-social a {
-        font-size: 8px;
-        max-width: 100px;
-    }
-
-    .contact-credit p {
-        font-size: 8px;
-    }
-
-    .copyright {
-        font-size: 7px;
+        font-size: 9px !important;
     }
 }
