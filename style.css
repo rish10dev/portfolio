@@ -3270,3 +3270,368 @@ section {
         font-size: 55px;
     }
 }
+/* =========================================================
+   MOBILE RESPONSIVE FINAL FIX
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -----------------------------------------------------
+       GENERAL
+       ----------------------------------------------------- */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    section {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       1. TECH CORE
+       ===================================================== */
+
+    .tech-core {
+        position: relative;
+        min-height: 700px;
+        width: 100%;
+        overflow: hidden;
+        padding: 90px 20px;
+    }
+
+    .tech-core h2,
+    .tech-core .section-title {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        font-size: 52px;
+        line-height: 1;
+        margin-bottom: 80px;
+    }
+
+    /* Make tech content visible */
+    .tech-core .tech-ball {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        z-index: 5;
+    }
+
+    /* Arrange the balls across the mobile section */
+
+    .tech-core .tech-ball:nth-child(1) {
+        top: 180px;
+        left: 18%;
+    }
+
+    .tech-core .tech-ball:nth-child(2) {
+        top: 230px;
+        left: 55%;
+    }
+
+    .tech-core .tech-ball:nth-child(3) {
+        top: 330px;
+        left: 30%;
+    }
+
+    .tech-core .tech-ball:nth-child(4) {
+        top: 390px;
+        left: 68%;
+    }
+
+    .tech-core .tech-ball:nth-child(5) {
+        top: 480px;
+        left: 12%;
+    }
+
+    .tech-core .tech-ball:nth-child(6) {
+        top: 520px;
+        left: 48%;
+    }
+
+
+    /* If your tech content is inside another wrapper */
+    .tech-core .tech-container,
+    .tech-core .tech-grid,
+    .tech-core .tech-content {
+        position: relative;
+        min-height: 550px;
+        width: 100%;
+        display: block;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+
+    /* =====================================================
+       2. PORTFOLIO
+       ===================================================== */
+
+    .portfolio {
+        position: relative;
+        width: 100%;
+        min-height: 750px;
+        overflow: hidden;
+    }
+
+    /* Image becomes smaller and stays behind the title */
+
+    .portfolio .center-image,
+    .portfolio .portfolio-image,
+    .portfolio img.center-image {
+        position: absolute !important;
+
+        width: 38% !important;
+        max-width: 170px !important;
+
+        height: auto !important;
+        max-height: 430px !important;
+
+        object-fit: contain !important;
+
+        left: 50% !important;
+        top: 46% !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        z-index: 1 !important;
+    }
+
+    /* Portfolio title stays on top */
+
+    .portfolio .portfolio-text {
+        position: absolute !important;
+
+        left: 50% !important;
+        top: 42% !important;
+
+        width: 100% !important;
+
+        transform: translate(-50%, -50%) scaleY(1.15) !important;
+
+        text-align: center !important;
+
+        font-size: clamp(58px, 16vw, 100px) !important;
+        line-height: 0.85 !important;
+
+        white-space: nowrap;
+
+        z-index: 5 !important;
+
+        pointer-events: none;
+    }
+
+    /* University / education text */
+
+    .portfolio .portfolio-info,
+    .portfolio .portfolio-description {
+        position: absolute;
+        z-index: 6;
+
+        left: 50%;
+        bottom: 80px;
+
+        width: 90%;
+
+        transform: translateX(-50%);
+
+        text-align: center;
+
+        font-size: 13px;
+        line-height: 1.8;
+        letter-spacing: 2px;
+    }
+
+
+    /* =====================================================
+       3. JOURNEY / EXPERIENCE
+       KEEP DESKTOP ZIG-ZAG ON MOBILE
+       ===================================================== */
+
+    .career {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding: 100px 0 140px;
+    }
+
+    /* Center vertical line */
+
+    .career-line {
+        position: absolute !important;
+
+        top: 0;
+        bottom: 0;
+
+        left: 50% !important;
+
+        width: 2px !important;
+
+        transform: translateX(-50%);
+
+        z-index: 1;
+    }
+
+
+    /* Every journey item remains two-sided */
+
+    .career-item,
+    .career-item.reverse {
+        position: relative;
+
+        width: 100% !important;
+
+        min-height: 280px;
+
+        display: grid !important;
+
+        grid-template-columns: 1fr 1fr !important;
+
+        align-items: center;
+
+        margin-bottom: 70px;
+
+        padding: 0 !important;
+    }
+
+
+    /* Normal item */
+
+    .career-item:not(.reverse) .career-left {
+        grid-column: 1;
+        text-align: right;
+
+        padding: 0 25px 0 15px;
+    }
+
+    .career-item:not(.reverse) .career-right {
+        grid-column: 2;
+        text-align: left;
+
+        padding: 0 15px 0 25px;
+    }
+
+
+    /* Reverse item */
+
+    .career-item.reverse .career-left {
+        grid-column: 2;
+        grid-row: 1;
+
+        text-align: left;
+
+        padding: 0 15px 0 25px;
+    }
+
+    .career-item.reverse .career-right {
+        grid-column: 1;
+        grid-row: 1;
+
+        text-align: right;
+
+        padding: 0 25px 0 15px;
+    }
+
+
+    /* Make sure the zig-zag content stays visible */
+
+    .career-left,
+    .career-right {
+        position: relative;
+
+        width: 100% !important;
+
+        min-width: 0;
+
+        z-index: 3;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+
+    /* Journey headings */
+
+    .career-left h2,
+    .career-right h2,
+    .career-left h3,
+    .career-right h3 {
+        font-size: clamp(17px, 5vw, 27px) !important;
+
+        line-height: 1.05;
+
+        margin: 10px 0;
+    }
+
+
+    /* Journey descriptions */
+
+    .career-left p,
+    .career-right p {
+        font-size: 12px !important;
+
+        line-height: 1.7;
+
+        margin: 12px 0;
+
+        max-width: 160px;
+    }
+
+
+    /* Keep labels small */
+
+    .career-label,
+    .career-tag,
+    .career-item span {
+        font-size: 9px !important;
+
+        letter-spacing: 3px;
+    }
+
+
+    /* Numbers */
+
+    .career-number {
+        font-size: 35px !important;
+    }
+
+
+    /* =====================================================
+       SOCIAL SIDEBAR
+       ===================================================== */
+
+    .social-sidebar {
+        left: 18px !important;
+
+        z-index: 50;
+    }
+
+    .social-sidebar a {
+        font-size: 25px;
+    }
+
+
+    /* =====================================================
+       BACK TO TOP
+       ===================================================== */
+
+    .back-to-top {
+        width: 55px !important;
+        height: 55px !important;
+
+        right: 20px !important;
+        bottom: 25px !important;
+    }
+
+}
