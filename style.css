@@ -3526,3 +3526,561 @@ section {
     }
 
 }
+
+/* =========================================================
+   FINAL MOBILE RESPONSIVE OVERRIDES
+   Desktop styles above remain untouched.
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    body {
+        min-width: 0 !important;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    .navbar {
+        height: 100px !important;
+        padding: 0 18px !important;
+        display: grid !important;
+        grid-template-columns: 1fr auto !important;
+        grid-template-rows: 54px 46px !important;
+        align-items: center !important;
+        overflow: visible !important;
+    }
+
+    .navbar .logo {
+        font-size: 20px !important;
+        line-height: 1 !important;
+        white-space: nowrap !important;
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+    }
+
+    .navbar .nav-email {
+        display: none !important;
+    }
+
+    .navbar nav {
+        grid-column: 1 / -1 !important;
+        grid-row: 2 !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .navbar nav a {
+        font-size: 9px !important;
+        letter-spacing: 1px !important;
+        white-space: nowrap !important;
+        padding: 8px 2px !important;
+    }
+
+    /* ---------- SOCIAL BAR ---------- */
+    .social-fixed {
+        left: 10px !important;
+        gap: 20px !important;
+        z-index: 100 !important;
+    }
+
+    .social-fixed a {
+        font-size: 20px !important;
+    }
+
+    /* ---------- HERO ---------- */
+    .intro {
+        min-height: 100svh !important;
+        height: auto !important;
+        padding: 120px 22px 55px !important;
+        justify-content: center !important;
+    }
+
+    .top-line {
+        width: 100% !important;
+        margin-bottom: 38px !important;
+        font-size: clamp(8px, 2.5vw, 11px) !important;
+        letter-spacing: 3px !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+    }
+
+    .intro h1,
+    .intro h2 {
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: clamp(62px, 19vw, 105px) !important;
+        line-height: .82 !important;
+        letter-spacing: 3px !important;
+        text-align: center !important;
+        overflow-wrap: normal !important;
+        word-break: normal !important;
+    }
+
+    .intro h2 {
+        margin-bottom: 28px !important;
+    }
+
+    .hero-buttons {
+        width: min(100%, 340px) !important;
+        margin-top: 28px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .hero-buttons .btn {
+        width: 100% !important;
+        padding: 14px 20px !important;
+        text-align: center !important;
+        font-size: 11px !important;
+        letter-spacing: 1.5px !important;
+    }
+
+    .scroll-line {
+        height: 50px !important;
+        margin-top: 25px !important;
+    }
+
+    .scroll-text {
+        font-size: 9px !important;
+        letter-spacing: 4px !important;
+    }
+
+    /* ---------- PORTFOLIO ---------- */
+    .portfolio-container {
+        width: 100% !important;
+        height: 430px !important;
+        min-height: 430px !important;
+        padding: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        overflow: hidden !important;
+    }
+
+    .portfolio-text {
+        width: 100% !important;
+        font-size: 25vw !important;
+        line-height: 1 !important;
+        letter-spacing: -7px !important;
+        text-align: center !important;
+        transform: none !important;
+        white-space: nowrap !important;
+    }
+
+    .portfolio-text span {
+        -webkit-text-stroke: 2px white !important;
+    }
+
+    .center-image {
+        position: absolute !important;
+        top: 95px !important;
+        left: 50% !important;
+        width: min(78vw, 330px) !important;
+        height: 280px !important;
+        margin: 0 !important;
+        object-fit: contain !important;
+        transform: translateX(-50%) scale(.94) !important;
+        z-index: 1 !important;
+    }
+
+    .center-image.active {
+        transform: translateX(-50%) scale(1) !important;
+    }
+
+    .portfolio-details {
+        width: 100% !important;
+        margin: -10px 0 0 !important;
+        padding: 0 25px !important;
+        text-align: center !important;
+        font-size: 12px !important;
+        line-height: 1.8 !important;
+        letter-spacing: .7px !important;
+    }
+
+    /* ---------- TECH CORE ---------- */
+    .tech-core {
+        min-height: 790px !important;
+        padding: 65px 10px 40px !important;
+    }
+
+    .tech-header {
+        margin-bottom: 5px !important;
+    }
+
+    .tech-header h2 {
+        font-size: clamp(45px, 14vw, 70px) !important;
+        letter-spacing: 2px !important;
+        line-height: .9 !important;
+    }
+
+    .core-container {
+        width: min(100%, 390px) !important;
+        height: 620px !important;
+        margin: 0 auto !important;
+        transform: none !important;
+    }
+
+    .circuit-lines {
+        display: none !important;
+    }
+
+    .core-card {
+        width: 115px !important;
+        height: 115px !important;
+        top: 48% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .core-center {
+        font-size: 24px !important;
+        letter-spacing: 4px !important;
+    }
+
+    .core-ring.ring1 {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .core-ring.ring2 {
+        width: 76px !important;
+        height: 76px !important;
+    }
+
+    .node {
+        width: 88px !important;
+        min-width: 88px !important;
+        height: 88px !important;
+        transform: translate(-50%, -50%) !important;
+        border-radius: 50% !important;
+    }
+
+    .node img {
+        width: 34px !important;
+        height: 34px !important;
+        margin-bottom: 3px !important;
+    }
+
+    .node h3 {
+        font-size: 9px !important;
+        line-height: 1.1 !important;
+        margin: 3px 0 0 !important;
+    }
+
+    .node span {
+        display: none !important;
+    }
+
+    .node-python { left: 50% !important; top: 10% !important; }
+    .node-sentiment { left: 22% !important; top: 29% !important; }
+    .node-git { left: 78% !important; top: 29% !important; }
+    .node-numpy { left: 20% !important; top: 68% !important; }
+    .node-pandas { left: 80% !important; top: 68% !important; }
+    .node-analysis { left: 25% !important; top: 88% !important; }
+    .node-visualization { left: 75% !important; top: 88% !important; }
+    .node-ocr { left: 50% !important; top: 97% !important; }
+
+    /* ---------- PROJECTS ---------- */
+    .projects {
+        width: 100% !important;
+        padding: 75px 16px !important;
+    }
+
+    .projects-heading {
+        margin-bottom: 42px !important;
+    }
+
+    .projects-heading h2 {
+        width: 100% !important;
+        font-size: 18vw !important;
+        line-height: .85 !important;
+        letter-spacing: -1px !important;
+        text-align: center !important;
+    }
+
+    .projects-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 24px !important;
+        width: 100% !important;
+    }
+
+    .project-card {
+        width: 100% !important;
+        height: 440px !important;
+        margin: 0 !important;
+        border-radius: 16px !important;
+        transform: none !important;
+    }
+
+    .project-card img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 16px !important;
+    }
+
+    .project-card .overlay {
+        padding: 26px 18px 20px !important;
+    }
+
+    .project-card .overlay p {
+        font-size: 9px !important;
+        letter-spacing: 1.3px !important;
+    }
+
+    .project-card .overlay h3 {
+        font-size: 27px !important;
+        line-height: 1 !important;
+        margin-bottom: 9px !important;
+    }
+
+    .project-card .overlay span {
+        font-size: 11.5px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 15px !important;
+    }
+
+    .demo-btn {
+        padding: 9px 15px !important;
+        font-size: 9px !important;
+    }
+
+    /* ---------- JOURNEY ---------- */
+    .career {
+        padding: 80px 20px 100px !important;
+    }
+
+    .career-heading {
+        margin-bottom: 70px !important;
+    }
+
+    .career-heading p {
+        font-size: 11px !important;
+        letter-spacing: 4px !important;
+    }
+
+    .career-heading h2 {
+        font-size: 20vw !important;
+    }
+
+    .career-line {
+        left: 24px !important;
+        top: 215px !important;
+        bottom: 90px !important;
+        width: 2px !important;
+    }
+
+    .career-item,
+    .career-item.reverse {
+        display: block !important;
+        width: 100% !important;
+        min-height: 0 !important;
+        margin: 0 0 70px !important;
+        padding: 0 0 0 52px !important;
+        direction: ltr !important;
+    }
+
+    .career-left,
+    .career-right,
+    .career-item.reverse .career-left,
+    .career-item.reverse .career-right {
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+        text-align: left !important;
+        margin: 0 0 20px !important;
+    }
+
+    .career-right,
+    .career-item.reverse .career-right {
+        font-size: 13px !important;
+        line-height: 1.7 !important;
+    }
+
+    .career-left h3 {
+        font-size: clamp(28px, 8vw, 40px) !important;
+        line-height: 1 !important;
+    }
+
+    .career-year {
+        display: block !important;
+        position: absolute !important;
+        left: 24px !important;
+        top: 0 !important;
+        transform: translateX(-50%) !important;
+        font-size: 24px !important;
+        line-height: 1 !important;
+        background: #000 !important;
+        padding: 5px 0 !important;
+        z-index: 5 !important;
+    }
+
+    .badge {
+        padding: 7px 13px !important;
+        margin-bottom: 12px !important;
+        font-size: 9px !important;
+        letter-spacing: 2px !important;
+    }
+
+    /* ---------- CONTACT ---------- */
+    #contact,
+    .contact {
+        width: 100% !important;
+        padding: 80px 22px 50px !important;
+        min-height: auto !important;
+    }
+
+    .contact-title {
+        font-size: 18vw !important;
+        line-height: .85 !important;
+        margin-bottom: 50px !important;
+    }
+
+    .contact-bg,
+    .contact::before {
+        display: none !important;
+    }
+
+    .contact-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 45px !important;
+    }
+
+    .contact-info h3,
+    .contact-end h3 {
+        font-size: 20px !important;
+        line-height: 1.4 !important;
+        white-space: normal !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    .contact-label {
+        font-size: 10px !important;
+        letter-spacing: 4px !important;
+    }
+
+    .contact-social a {
+        font-size: 20px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .contact-end {
+        text-align: left !important;
+    }
+
+    .contact-end p {
+        font-size: 16px !important;
+    }
+
+    /* Disable desktop-only pointer visuals on touch screens */
+    .cursor-glow {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .navbar {
+        padding: 0 14px !important;
+    }
+
+    .navbar .logo {
+        font-size: 18px !important;
+    }
+
+    .navbar nav a {
+        font-size: 8px !important;
+        letter-spacing: .8px !important;
+    }
+
+    .intro {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    .intro h1,
+    .intro h2 {
+        font-size: 19vw !important;
+    }
+
+    .portfolio-container {
+        height: 390px !important;
+        min-height: 390px !important;
+    }
+
+    .portfolio-text {
+        font-size: 25vw !important;
+    }
+
+    .center-image {
+        width: 82vw !important;
+        max-width: 300px !important;
+        height: 250px !important;
+        top: 85px !important;
+    }
+
+    .portfolio-details {
+        font-size: 11px !important;
+        padding: 0 18px !important;
+    }
+
+    .tech-core {
+        min-height: 730px !important;
+    }
+
+    .core-container {
+        height: 570px !important;
+    }
+
+    .core-card {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .node {
+        width: 76px !important;
+        min-width: 76px !important;
+        height: 76px !important;
+    }
+
+    .node img {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .node h3 {
+        font-size: 8px !important;
+    }
+
+    .project-card {
+        height: 410px !important;
+    }
+
+    .career {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .career-item {
+        padding-left: 46px !important;
+    }
+
+    .career-line,
+    .career-year {
+        left: 20px !important;
+    }
+}
