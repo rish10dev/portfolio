@@ -2985,9 +2985,8 @@ section {
 
     #portfolio {
         width: 100% !important;
-
         padding: 0 !important;
-
+        margin: 0 !important;
         overflow: hidden !important;
     }
 
@@ -2995,38 +2994,55 @@ section {
         position: relative !important;
 
         width: 100% !important;
-        height: 620px !important;
+        height: 560px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
 
         display: flex !important;
-
         justify-content: center !important;
         align-items: center !important;
 
         overflow: hidden !important;
     }
 
+    /* BIG PORTFOLIO TEXT */
+
     .portfolio-text {
         position: absolute !important;
 
         left: 50% !important;
-        top: 50% !important;
+        top: 52% !important;
 
         width: max-content !important;
 
         margin: 0 !important;
 
-        transform: translate(-50%, -50%) scaleY(1.15) !important;
+        transform: translate(-50%, -50%) scaleY(1.12) !important;
 
-        z-index: 3 !important;
+        font-family: 'Bebas Neue', sans-serif !important;
 
-        font-size: 200px !important;
+        font-size: 24vw !important;
 
-        line-height: 2 !important;
+        line-height: 0.9 !important;
 
-        letter-spacing: -10px !important;
+        letter-spacing: -5px !important;
 
         white-space: nowrap !important;
+
+        text-align: center !important;
+
+        color: #d9d9d9 !important;
+
+        z-index: 2 !important;
     }
+
+    .portfolio-text span {
+        -webkit-text-stroke: 2px white !important;
+    }
+
+
+    /* PROFILE IMAGE */
 
     .center-image {
         position: absolute !important;
@@ -3034,8 +3050,8 @@ section {
         left: 50% !important;
         top: 50% !important;
 
-        width: 300px !important;
-        height: 400px !important;
+        width: 310px !important;
+        height: 430px !important;
 
         margin: 0 !important;
 
@@ -3043,23 +3059,40 @@ section {
 
         transform: translate(-50%, -50%) !important;
 
-        z-index: 2 !important;
+        z-index: 1 !important;
+
+        opacity: 1 !important;
     }
+
+
+    /* UNIVERSITY / DEGREE TEXT */
 
     .portfolio-details {
         width: 100% !important;
 
-        margin: -10px 0 0 !important;
+        margin: -5px 0 0 !important;
 
-        padding: 0 25px 60px !important;
+        padding: 0 25px 55px !important;
 
         text-align: center !important;
 
+        color: rgba(255,255,255,0.55) !important;
+
+        font-family: Arial, sans-serif !important;
+
         font-size: 11px !important;
 
-        line-height: 1.8 !important;
+        line-height: 1.9 !important;
+
+        letter-spacing: 1.2px !important;
+
+        text-transform: uppercase !important;
     }
 
+    .portfolio-details p {
+        margin: 0 !important;
+    }
+}
 
     /* =====================================================
        TECH CORE
@@ -3526,8 +3559,6 @@ section {
     .cursor-glow {
         display: none !important;
     }
-}
-
 
 /* =========================================================
    VERY SMALL PHONES
@@ -3575,17 +3606,36 @@ section {
     }
 
     .portfolio-container {
-        height: 560px !important;
+        height: 530px !important;
     }
 
     .portfolio-text {
-        font-size: 24vw !important;
+        top: 53% !important;
+
+        font-size: 23vw !important;
+
+        letter-spacing: -4px !important;
+    }
+
+    .portfolio-text span {
+        -webkit-text-stroke: 1.5px white !important;
     }
 
     .center-image {
-        width: 300px !important;
-        height: 390px !important;
+        width: 290px !important;
+        height: 410px !important;
     }
+
+    .portfolio-details {
+        margin-top: 0 !important;
+
+        padding: 0 20px 50px !important;
+
+        font-size: 10px !important;
+
+        line-height: 1.9 !important;
+    }
+
 
     .tech-core {
         min-height: 760px !important;
