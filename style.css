@@ -3019,11 +3019,11 @@ section {
 
         z-index: 3 !important;
 
-        font-size: 100vw !important;
+        font-size: 200px !important;
 
         line-height: 2 !important;
 
-        letter-spacing: -7px !important;
+        letter-spacing: -10px !important;
 
         white-space: nowrap !important;
     }
