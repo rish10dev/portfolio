@@ -3732,7 +3732,7 @@ section {
     }
 
     .circuit-lines {
-        display: none !important;
+        display: contents !important;
     }
 
     .core-card {
@@ -3857,82 +3857,28 @@ section {
         font-size: 9px !important;
     }
 
-    /* ---------- JOURNEY ---------- */
-    .career {
-        padding: 80px 20px 100px !important;
+    /* Journey */
+
+    .career-item {
+        min-height: 300px !important;
+
+        grid-template-columns: 1fr 1fr !important;
     }
 
-    .career-heading {
-        margin-bottom: 70px !important;
+    .career-item .career-left,
+    .career-item .career-right {
+        padding: 10px !important;
     }
 
-    .career-heading p {
+    .career-item p,
+    .career-item .career-description {
         font-size: 11px !important;
-        letter-spacing: 4px !important;
     }
 
-    .career-heading h2 {
-        font-size: 20vw !important;
-    }
-
-    .career-line {
-        left: 24px !important;
-        top: 215px !important;
-        bottom: 90px !important;
-        width: 2px !important;
-    }
-
-    .career-item,
-    .career-item.reverse {
-        display: block !important;
-        width: 100% !important;
-        min-height: 0 !important;
-        margin: 0 0 70px !important;
-        padding: 0 0 0 52px !important;
-        direction: ltr !important;
-    }
-
-    .career-left,
-    .career-right,
-    .career-item.reverse .career-left,
-    .career-item.reverse .career-right {
-        display: block !important;
-        width: 100% !important;
-        max-width: none !important;
-        padding: 0 !important;
-        text-align: left !important;
-        margin: 0 0 20px !important;
-    }
-
-    .career-right,
-    .career-item.reverse .career-right {
-        font-size: 13px !important;
-        line-height: 1.7 !important;
-    }
-
-    .career-left h3 {
-        font-size: clamp(28px, 8vw, 40px) !important;
-        line-height: 1 !important;
-    }
-
-    .career-year {
-        display: block !important;
-        position: absolute !important;
-        left: 24px !important;
-        top: 0 !important;
-        transform: translateX(-50%) !important;
-        font-size: 24px !important;
-        line-height: 1 !important;
-        background: #000 !important;
-        padding: 5px 0 !important;
-        z-index: 5 !important;
-    }
-
-    .badge {
-        padding: 7px 13px !important;
-        margin-bottom: 12px !important;
-        font-size: 9px !important;
-        letter-spacing: 2px !important;
+    .career-item h2,
+    .career-item h3,
+    .career-item .career-title {
+        font-size: 16px !important;
     }
 
     /* ---------- CONTACT ---------- */
