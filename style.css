@@ -3427,3 +3427,1149 @@ section {
     }
 
 }
+/* =========================================================
+   MOBILE RESPONSIVE ONLY
+   APPEND THIS AT THE VERY END OF style.css
+   DESKTOP CSS IS NOT CHANGED
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* =====================================================
+       GLOBAL MOBILE
+    ===================================================== */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    section {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    .navbar {
+        position: relative;
+        width: 100%;
+        min-height: 190px;
+
+        padding: 28px 28px 22px;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 28px;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    .nav-email {
+        display: none;
+    }
+
+    .navbar nav {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 8px;
+
+        margin-top: 30px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       FIXED SOCIAL BAR
+    ===================================================== */
+
+    .social-fixed {
+        left: 18px;
+        top: 50%;
+
+        gap: 28px;
+
+        transform: translateY(-50%);
+    }
+
+    .social-fixed a {
+        font-size: 25px;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .intro {
+        min-height: calc(100vh - 190px);
+        height: auto;
+
+        padding: 70px 20px 60px;
+
+        justify-content: center;
+    }
+
+    .top-line {
+        width: 100%;
+
+        margin-bottom: 65px;
+
+        font-size: 9px;
+        letter-spacing: 3px;
+
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .intro h1,
+    .intro h2 {
+        width: 100%;
+
+        font-size: clamp(70px, 23vw, 145px);
+
+        line-height: .82;
+        letter-spacing: 2px;
+
+        text-align: center;
+    }
+
+    .intro h2 {
+        margin-bottom: 25px;
+    }
+
+    .hero-description {
+        width: 90%;
+        max-width: 380px;
+
+        margin: 20px auto;
+    }
+
+    .hero-description p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+
+        margin-top: 25px;
+    }
+
+    .btn {
+        width: min(280px, 90%);
+
+        padding: 14px 20px;
+
+        font-size: 11px;
+        letter-spacing: 1.5px;
+
+        text-align: center;
+    }
+
+    .scroll-line {
+        height: 55px;
+        margin-top: 25px;
+    }
+
+    .scroll-text {
+        font-size: 9px;
+        letter-spacing: 4px;
+    }
+
+
+    /* =====================================================
+       PORTFOLIO
+    ===================================================== */
+
+    .portfolio-container {
+        width: 100%;
+        height: 430px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+    }
+
+    .portfolio-text {
+        position: absolute;
+
+        width: max-content;
+
+        font-size: 29vw;
+        line-height: 1;
+
+        letter-spacing: -7px;
+
+        transform: scaleY(1.15) !important;
+
+        white-space: nowrap;
+    }
+
+    .portfolio-text span {
+        -webkit-text-stroke: 2px white;
+    }
+
+    .center-image {
+        width: 300px;
+        height: 300px;
+
+        top: 65px;
+
+        object-fit: contain;
+
+        z-index: 3;
+    }
+
+    .portfolio-details {
+        margin-top: -15px;
+
+        padding: 0 25px;
+
+        font-size: 12px;
+        line-height: 1.8;
+        letter-spacing: 1px;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       TECH CORE
+       IMPORTANT:
+       NO SCALE()
+       NO MICROSCOPIC DESKTOP DIAGRAM
+    ===================================================== */
+
+    .tech-core {
+        width: 100%;
+
+        min-height: 850px;
+
+        padding: 60px 0 50px;
+
+        position: relative;
+
+        overflow: hidden;
+    }
+
+    .tech-header {
+        width: 100%;
+
+        margin-bottom: 20px;
+
+        text-align: center;
+    }
+
+    .tech-header h2 {
+        font-size: 55px;
+
+        line-height: .9;
+        letter-spacing: 2px;
+
+        margin: 0;
+    }
+
+    .tech-header span {
+        display: block;
+
+        padding: 0 20px;
+
+        font-size: 12px;
+    }
+
+
+    /* MAIN TECH MAP */
+
+    .core-container {
+        position: relative;
+
+        width: 370px;
+        max-width: 100%;
+
+        height: 650px;
+
+        margin: 0 auto;
+
+        transform: none !important;
+        scale: 1 !important;
+
+        z-index: 10;
+    }
+
+
+    /* =====================================================
+       CIRCUIT LINES
+    ===================================================== */
+
+    .circuit-lines {
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        z-index: 2;
+
+        pointer-events: none;
+    }
+
+    .circuit-lines path {
+        fill: none;
+
+        stroke: rgba(255, 40, 120, .55);
+
+        stroke-width: 3;
+
+        stroke-linecap: round;
+        stroke-linejoin: round;
+
+        stroke-dasharray: 8 10;
+
+        filter:
+            drop-shadow(0 0 5px rgba(255, 40, 120, .5));
+
+        animation: flow 8s linear infinite;
+    }
+
+
+    /* =====================================================
+       AI CORE
+    ===================================================== */
+
+    .core-card {
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        width: 135px;
+        height: 135px;
+
+        transform: translate(-50%, -50%) !important;
+
+        z-index: 20;
+    }
+
+    .core-center {
+        font-size: 38px;
+
+        letter-spacing: 5px;
+    }
+
+    .ring1 {
+        width: 115px;
+        height: 115px;
+    }
+
+    .ring2 {
+        width: 88px;
+        height: 88px;
+    }
+
+    .core-card .core-glow {
+        width: 90px;
+        height: 90px;
+    }
+
+
+    /* =====================================================
+       TECH NODES
+    ===================================================== */
+
+    .node {
+        position: absolute;
+
+        width: 78px;
+        height: 78px;
+
+        padding: 5px;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        border-radius: 50%;
+
+        z-index: 15;
+
+        transform: none;
+    }
+
+    .node img {
+        width: 28px;
+        height: 25px;
+
+        object-fit: contain;
+
+        margin-bottom: 3px;
+    }
+
+    .node h3 {
+        font-size: 8px;
+
+        line-height: 1.05;
+
+        margin: 0 0 2px;
+    }
+
+    .node span {
+        display: block;
+
+        font-size: 6px;
+
+        line-height: 1;
+    }
+
+
+    /* =====================================================
+       NODE POSITIONS
+       Designed around the same circular desktop structure
+    ===================================================== */
+
+    /* TOP */
+    .node-python {
+        top: 55px;
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+
+    /* TOP LEFT */
+    .node-ocr {
+        top: 105px;
+        left: 45px;
+    }
+
+    /* TOP RIGHT */
+    .node-sentiment {
+        top: 105px;
+        right: 45px;
+    }
+
+    /* LEFT */
+    .node-numpy {
+        top: 50%;
+        left: 15px;
+
+        transform: translateY(-50%);
+    }
+
+    /* RIGHT */
+    .node-git {
+        top: 50%;
+        right: 15px;
+
+        transform: translateY(-50%);
+    }
+
+    /* BOTTOM LEFT */
+    .node-analysis {
+        bottom: 105px;
+        left: 45px;
+    }
+
+    /* BOTTOM RIGHT */
+    .node-pandas {
+        bottom: 105px;
+        right: 45px;
+    }
+
+    /* BOTTOM */
+    .node-visualization {
+        bottom: 30px;
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+
+
+    /* =====================================================
+       PROJECTS
+    ===================================================== */
+
+    .projects {
+        width: 100%;
+
+        padding: 70px 18px 90px;
+    }
+
+    .projects-heading {
+        margin-bottom: 45px;
+    }
+
+    .projects-heading h2 {
+        width: 100%;
+
+        font-size: 19vw;
+
+        line-height: .85;
+        letter-spacing: -2px;
+
+        text-align: center;
+    }
+
+    .projects-grid {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .project-card {
+        width: 100%;
+
+        height: 440px;
+
+        border-radius: 18px;
+
+        transform-style: flat;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    .project-card .overlay {
+        padding: 28px 20px 22px;
+
+        backdrop-filter: blur(8px);
+    }
+
+    .project-card .overlay p {
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .project-card .overlay h3 {
+        font-size: 28px;
+
+        line-height: 1;
+    }
+
+    .project-card .overlay span {
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+    .demo-btn {
+        padding: 9px 16px;
+
+        font-size: 10px;
+    }
+
+
+    /* =====================================================
+       EXPERIENCE / JOURNEY
+       DESKTOP-STYLE ZIG-ZAG ON MOBILE
+    ===================================================== */
+
+    .career {
+        width: 100%;
+
+        padding: 80px 15px 110px;
+
+        position: relative;
+
+        overflow: hidden;
+    }
+
+    .career-heading {
+        margin-bottom: 75px;
+
+        text-align: center;
+    }
+
+    .career-heading p {
+        font-size: 11px;
+        letter-spacing: 4px;
+
+        margin-bottom: 10px;
+    }
+
+    .career-heading h2 {
+        font-size: 70px;
+
+        line-height: .85;
+    }
+
+
+    /* CENTER TIMELINE */
+
+    .career-line {
+        top: 210px;
+        bottom: 80px;
+
+        left: 50%;
+
+        width: 2px;
+
+        transform: translateX(-50%);
+
+        z-index: 1;
+    }
+
+
+    /* EVERY ITEM STAYS ZIG-ZAG */
+
+    .career-item,
+    .career-item.reverse {
+        position: relative;
+
+        display: grid;
+
+        grid-template-columns: minmax(0, 1fr) 42px minmax(0, 1fr);
+
+        align-items: center;
+
+        width: 100%;
+
+        min-height: 230px;
+
+        margin: 0 auto;
+
+        padding: 0;
+
+        z-index: 2;
+    }
+
+
+    /* NORMAL ITEM */
+
+    .career-item .career-left {
+        grid-column: 1;
+
+        width: 100%;
+
+        padding: 0 15px 0 5px !important;
+
+        text-align: right;
+
+        justify-self: end;
+
+        margin: 0;
+    }
+
+    .career-item .career-right {
+        grid-column: 3;
+
+        width: 100%;
+
+        padding: 0 5px 0 15px !important;
+
+        text-align: left;
+
+        justify-self: start;
+
+        margin: 0;
+    }
+
+
+    /* REVERSE ITEM */
+
+    .career-item.reverse .career-right {
+        grid-column: 1;
+
+        padding: 0 15px 0 5px !important;
+
+        text-align: right;
+
+        justify-self: end;
+    }
+
+    .career-item.reverse .career-left {
+        grid-column: 3;
+
+        padding: 0 5px 0 15px !important;
+
+        text-align: left;
+
+        justify-self: start;
+    }
+
+
+    /* YEAR IN CENTER */
+
+    .career-year,
+    .career-item:nth-of-type(even) .career-year,
+    .career-item:nth-of-type(odd) .career-year {
+        grid-column: 2;
+
+        grid-row: 1;
+
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        width: 42px;
+
+        font-size: 25px;
+
+        line-height: 1;
+
+        text-align: center;
+
+        transform: none !important;
+
+        z-index: 5;
+
+        text-shadow:
+            0 0 15px rgba(255, 45, 125, .5);
+    }
+
+
+    /* BADGES */
+
+    .badge {
+        padding: 6px 10px;
+
+        margin-bottom: 10px;
+
+        font-size: 7px;
+
+        letter-spacing: 1.5px;
+
+        white-space: nowrap;
+    }
+
+
+    /* TITLES */
+
+    .career-left h3 {
+        font-size: 24px;
+
+        line-height: .95;
+
+        letter-spacing: .5px;
+    }
+
+    .career-right {
+        font-size: 12px !important;
+
+        line-height: 1.55 !important;
+
+        color: #cfcfcf;
+    }
+
+
+    /* REMOVE OLD MOBILE DOT RULES */
+    .career-dot {
+        display: none !important;
+    }
+
+    .career-left::after,
+    .career-right::before,
+    .career-item.reverse .career-left::after,
+    .career-item.reverse .career-right::before {
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .contact {
+        width: 100%;
+
+        padding: 80px 25px 30px;
+
+        min-height: auto;
+    }
+
+    .contact-bg {
+        font-size: 28vw !important;
+    }
+
+    .contact-title {
+        font-size: 65px;
+
+        line-height: .9;
+
+        margin-bottom: 55px;
+    }
+
+    .contact-grid {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 45px;
+    }
+
+    .contact-label {
+        font-size: 10px;
+
+        letter-spacing: 4px;
+    }
+
+    .contact-info h3 {
+        font-size: 20px;
+
+        word-break: break-word;
+    }
+
+    .contact-social {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .contact-social a {
+        font-size: 18px;
+    }
+
+    .contact-end h3 {
+        font-size: 18px;
+
+        line-height: 1.4;
+    }
+
+    .contact-end p {
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       DISABLE DESKTOP MOUSE EFFECTS ON TOUCH
+    ===================================================== */
+
+    .cursor-glow {
+        display: none !important;
+    }
+
+    .project-card:hover {
+        transform: none !important;
+    }
+
+    .project-card:hover img {
+        transform: none !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    /* NAV */
+    .navbar {
+        min-height: 180px;
+
+        padding: 25px 20px 20px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .navbar nav a {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+
+    /* HERO */
+    .intro {
+        min-height: calc(100vh - 180px);
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .top-line {
+        font-size: 8px;
+        letter-spacing: 2px;
+
+        margin-bottom: 55px;
+    }
+
+    .intro h1,
+    .intro h2 {
+        font-size: 22vw;
+    }
+
+
+    /* PORTFOLIO */
+    .portfolio-container {
+        height: 380px;
+    }
+
+    .portfolio-text {
+        font-size: 28vw;
+        letter-spacing: -5px;
+    }
+
+    .center-image {
+        width: 270px;
+        height: 270px;
+
+        top: 60px;
+    }
+
+    .portfolio-details {
+        font-size: 10px;
+    }
+
+
+    /* TECH CORE */
+    .tech-core {
+        min-height: 800px;
+
+        padding-top: 55px;
+    }
+
+    .tech-header h2 {
+        font-size: 48px;
+    }
+
+    .core-container {
+        width: 340px;
+        height: 610px;
+
+        transform: none !important;
+    }
+
+    .core-card {
+        width: 120px;
+        height: 120px;
+    }
+
+    .core-center {
+        font-size: 34px;
+    }
+
+    .ring1 {
+        width: 102px;
+        height: 102px;
+    }
+
+    .ring2 {
+        width: 78px;
+        height: 78px;
+    }
+
+    .node {
+        width: 72px;
+        height: 72px;
+    }
+
+    .node img {
+        width: 25px;
+        height: 22px;
+    }
+
+    .node h3 {
+        font-size: 7px;
+    }
+
+    .node span {
+        font-size: 5.5px;
+    }
+
+    .node-python {
+        top: 45px;
+    }
+
+    .node-ocr {
+        top: 100px;
+        left: 32px;
+    }
+
+    .node-sentiment {
+        top: 100px;
+        right: 32px;
+    }
+
+    .node-numpy {
+        left: 8px;
+    }
+
+    .node-git {
+        right: 8px;
+    }
+
+    .node-analysis {
+        bottom: 95px;
+        left: 32px;
+    }
+
+    .node-pandas {
+        bottom: 95px;
+        right: 32px;
+    }
+
+    .node-visualization {
+        bottom: 25px;
+    }
+
+    .circuit-lines path {
+        stroke-width: 2.5px;
+
+        stroke: rgba(255, 40, 120, .6);
+    }
+
+
+    /* PROJECTS */
+    .projects {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .projects-heading h2 {
+        font-size: 18vw;
+    }
+
+    .project-card {
+        height: 420px;
+
+        border-radius: 15px;
+    }
+
+    .project-card .overlay h3 {
+        font-size: 25px;
+    }
+
+
+    /* =====================================================
+       JOURNEY
+       KEEP ZIG-ZAG
+    ===================================================== */
+
+    .career {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .career-heading {
+        margin-bottom: 65px;
+    }
+
+    .career-heading h2 {
+        font-size: 60px;
+    }
+
+    .career-line {
+        top: 195px;
+        bottom: 65px;
+    }
+
+    .career-item,
+    .career-item.reverse {
+        grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr);
+
+        min-height: 220px;
+    }
+
+    .career-item .career-left {
+        padding-right: 8px !important;
+        padding-left: 2px !important;
+    }
+
+    .career-item .career-right {
+        padding-left: 8px !important;
+        padding-right: 2px !important;
+    }
+
+    .career-item.reverse .career-right {
+        padding-right: 8px !important;
+        padding-left: 2px !important;
+    }
+
+    .career-item.reverse .career-left {
+        padding-left: 8px !important;
+        padding-right: 2px !important;
+    }
+
+    .career-year {
+        width: 34px;
+
+        font-size: 21px;
+    }
+
+    .career-left h3 {
+        font-size: 20px;
+    }
+
+    .career-right {
+        font-size: 10.5px !important;
+
+        line-height: 1.5 !important;
+    }
+
+    .badge {
+        padding: 5px 7px;
+
+        font-size: 6px;
+        letter-spacing: 1px;
+    }
+
+
+    /* CONTACT */
+    .contact {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .contact-title {
+        font-size: 58px;
+    }
+}
