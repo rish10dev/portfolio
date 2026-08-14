@@ -4096,29 +4096,153 @@ section {
         font-size: 9px !important;
     }
 
-    /* Journey */
+    .career {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding: 100px 0 140px;
+    }
 
-    .career-item {
-        min-height: 300px !important;
+    /* Center vertical line */
+
+    .career-line {
+        position: absolute !important;
+
+        top: 0;
+        bottom: 0;
+
+        left: 50% !important;
+
+        width: 2px !important;
+
+        transform: translateX(-50%);
+
+        z-index: 1;
+    }
+
+
+    /* Every journey item remains two-sided */
+
+    .career-item,
+    .career-item.reverse {
+        position: relative;
+
+        width: 100% !important;
+
+        min-height: 280px;
+
+        display: grid !important;
 
         grid-template-columns: 1fr 1fr !important;
+
+        align-items: center;
+
+        margin-bottom: 70px;
+
+        padding: 0 !important;
     }
 
-    .career-item .career-left,
-    .career-item .career-right {
-        padding: 10px !important;
+
+    /* Normal item */
+
+    .career-item:not(.reverse) .career-left {
+        grid-column: 1;
+        text-align: right;
+
+        padding: 0 25px 0 15px;
     }
 
-    .career-item p,
-    .career-item .career-description {
-        font-size: 11px !important;
+    .career-item:not(.reverse) .career-right {
+        grid-column: 2;
+        text-align: left;
+
+        padding: 0 15px 0 25px;
     }
 
-    .career-item h2,
-    .career-item h3,
-    .career-item .career-title {
-        font-size: 16px !important;
+
+    /* Reverse item */
+
+    .career-item.reverse .career-left {
+        grid-column: 2;
+        grid-row: 1;
+
+        text-align: left;
+
+        padding: 0 15px 0 25px;
     }
+
+    .career-item.reverse .career-right {
+        grid-column: 1;
+        grid-row: 1;
+
+        text-align: right;
+
+        padding: 0 25px 0 15px;
+    }
+
+
+    /* Make sure the zig-zag content stays visible */
+
+    .career-left,
+    .career-right {
+        position: relative;
+
+        width: 100% !important;
+
+        min-width: 0;
+
+        z-index: 3;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+
+    /* Journey headings */
+
+    .career-left h2,
+    .career-right h2,
+    .career-left h3,
+    .career-right h3 {
+        font-size: clamp(17px, 5vw, 27px) !important;
+
+        line-height: 1.05;
+
+        margin: 10px 0;
+    }
+
+
+    /* Journey descriptions */
+
+    .career-left p,
+    .career-right p {
+        font-size: 12px !important;
+
+        line-height: 1.7;
+
+        margin: 12px 0;
+
+        max-width: 160px;
+    }
+
+
+    /* Keep labels small */
+
+    .career-label,
+    .career-tag,
+    .career-item span {
+        font-size: 9px !important;
+
+        letter-spacing: 3px;
+    }
+
+
+    /* Numbers */
+
+    .career-number {
+        font-size: 35px !important;
+    }
+
 
     /* ---------- CONTACT ---------- */
     #contact,
