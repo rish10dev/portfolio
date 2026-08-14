@@ -4351,10 +4351,10 @@ section {
     }
 
     .center-image {
-        width: 82vw !important;
+        width: 100vw !important;
         max-width: 300px !important;
-        height: 250px !important;
-        top: 85px !important;
+        height: 175px !important;
+        top: 80px !important;
     }
 
     .portfolio-details {
@@ -4367,18 +4367,18 @@ section {
     }
 
     .core-container {
-        height: 570px !important;
+        height: 700px !important;
     }
 
     .core-card {
         width: 100px !important;
-        height: 100px !important;
+        height: 150px !important;
     }
 
     .node {
-        width: 76px !important;
+        width: 100px !important;
         min-width: 76px !important;
-        height: 76px !important;
+        height: 100px !important;
     }
 
     .node img {
