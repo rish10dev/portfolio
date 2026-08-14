@@ -3019,9 +3019,9 @@ section {
 
         z-index: 3 !important;
 
-        font-size: 25vw !important;
+        font-size: 100vw !important;
 
-        line-height: 1 !important;
+        line-height: 2 !important;
 
         letter-spacing: -7px !important;
 
@@ -3034,8 +3034,8 @@ section {
         left: 50% !important;
         top: 50% !important;
 
-        width: 330px !important;
-        height: 420px !important;
+        width: 300px !important;
+        height: 400px !important;
 
         margin: 0 !important;
 
