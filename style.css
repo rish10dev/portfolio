@@ -3708,89 +3708,328 @@ section {
         letter-spacing: .7px !important;
     }
 
-    /* ---------- TECH CORE ---------- */
+    /* =========================================================
+   TECH CORE — MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* ---------- MAIN SECTION ---------- */
+
     .tech-core {
-        min-height: 790px !important;
-        padding: 65px 10px 40px !important;
+        position: relative !important;
+        width: 100% !important;
+        min-height: 1100px !important;
+        height: auto !important;
+        overflow: hidden !important;
+        padding: 100px 0 120px !important;
     }
 
+
+    /* ---------- HEADING ---------- */
+
     .tech-header {
-        margin-bottom: 5px !important;
+        position: relative !important;
+        width: 100% !important;
+        text-align: center !important;
+        z-index: 20 !important;
+        margin: 0 0 30px !important;
     }
 
     .tech-header h2 {
-        font-size: clamp(45px, 14vw, 70px) !important;
-        letter-spacing: 2px !important;
-        line-height: .9 !important;
+        position: relative !important;
+        display: block !important;
+
+        font-size: 48px !important;
+        line-height: 1 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        text-align: center !important;
+        white-space: nowrap !important;
+
+        z-index: 20 !important;
     }
 
+
+    /* ---------- MAIN CONTAINER ---------- */
+
     .core-container {
-        width: min(100%, 390px) !important;
-        height: 620px !important;
+        position: relative !important;
+
+        width: 100% !important;
+        height: 900px !important;
+
         margin: 0 auto !important;
+
+        display: block !important;
+
+        overflow: visible !important;
+    }
+
+
+    /* ---------- BACKGROUND GLOW ---------- */
+
+    .core-container > .core-glow {
+        position: absolute !important;
+
+        left: 50% !important;
+        top: 50% !important;
+
+        width: 260px !important;
+        height: 260px !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        opacity: 0.5 !important;
+
+        z-index: 1 !important;
+    }
+
+
+    /* =====================================================
+       CIRCUIT
+       ===================================================== */
+
+    .circuit-lines {
+        position: absolute !important;
+
+        left: 50% !important;
+        top: 50% !important;
+
+        width: 100% !important;
+        height: 700px !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        z-index: 2 !important;
+
+        display: block !important;
+
+        pointer-events: none !important;
+    }
+
+    .circuit-lines path {
+        vector-effect: non-scaling-stroke !important;
+    }
+
+
+    /* =====================================================
+       AI PROCESSOR — CENTER
+       ===================================================== */
+
+    .core-card {
+        position: absolute !important;
+
+        left: 50% !important;
+        top: 50% !important;
+
+        width: 150px !important;
+        height: 150px !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        z-index: 10 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+
+    .core-center {
+        position: absolute !important;
+
+        left: 50% !important;
+        top: 50% !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        width: 65px !important;
+        height: 65px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        z-index: 15 !important;
+
+        font-size: 22px !important;
+    }
+
+
+    .core-ring {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+
+    .pulse {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+
+    /* =====================================================
+       TECH NODES
+       ===================================================== */
+
+    .node {
+        position: absolute !important;
+
+        width: 125px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        text-align: center !important;
+
+        z-index: 15 !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+
         transform: none !important;
     }
 
-    .circuit-lines {
-        display: contents !important;
-    }
-
-    .core-card {
-        width: 115px !important;
-        height: 115px !important;
-        top: 48% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-    }
-
-    .core-center {
-        font-size: 24px !important;
-        letter-spacing: 4px !important;
-    }
-
-    .core-ring.ring1 {
-        width: 100px !important;
-        height: 100px !important;
-    }
-
-    .core-ring.ring2 {
-        width: 76px !important;
-        height: 76px !important;
-    }
-
-    .node {
-        width: 88px !important;
-        min-width: 88px !important;
-        height: 88px !important;
-        transform: translate(-50%, -50%) !important;
-        border-radius: 50% !important;
-    }
 
     .node img {
-        width: 34px !important;
-        height: 34px !important;
-        margin-bottom: 3px !important;
+        width: 45px !important;
+        height: 45px !important;
+
+        object-fit: contain !important;
+
+        display: block !important;
+
+        margin: 0 auto 8px !important;
     }
+
 
     .node h3 {
-        font-size: 9px !important;
-        line-height: 1.1 !important;
-        margin: 3px 0 0 !important;
+        margin: 0 !important;
+
+        font-size: 13px !important;
+
+        line-height: 1.2 !important;
+
+        text-align: center !important;
     }
+
 
     .node span {
-        display: none !important;
+        display: block !important;
+
+        margin-top: 5px !important;
+
+        font-size: 8px !important;
+
+        line-height: 1.2 !important;
+
+        text-align: center !important;
+
+        opacity: 0.7 !important;
     }
 
-    .node-python { left: 50% !important; top: 10% !important; }
-    .node-sentiment { left: 22% !important; top: 29% !important; }
-    .node-git { left: 78% !important; top: 29% !important; }
-    .node-numpy { left: 20% !important; top: 68% !important; }
-    .node-pandas { left: 80% !important; top: 68% !important; }
-    .node-analysis { left: 25% !important; top: 88% !important; }
-    .node-visualization { left: 75% !important; top: 88% !important; }
-    .node-ocr { left: 50% !important; top: 97% !important; }
 
+    /* =====================================================
+       NODE POSITIONS
+       
+       8 nodes arranged around the AI processor
+       ===================================================== */
+
+
+    /* 1 — PYTHON */
+
+    .node-python {
+        top: 45px !important;
+        left: 50% !important;
+
+        transform: translateX(-50%) !important;
+    }
+
+
+    /* 2 — SENTIMENT ANALYSIS */
+
+    .node-sentiment {
+        top: 205px !important;
+        left: 5% !important;
+    }
+
+
+    /* 3 — GIT */
+
+    .node-git {
+        top: 205px !important;
+        right: 5% !important;
+        left: auto !important;
+    }
+
+
+    /* 4 — NUMPY */
+
+    .node-numpy {
+        top: 410px !important;
+        left: 2% !important;
+    }
+
+
+    /* 5 — PANDAS */
+
+    .node-pandas {
+        top: 410px !important;
+        right: 2% !important;
+        left: auto !important;
+    }
+
+
+    /* 6 — DATA ANALYSIS */
+
+    .node-analysis {
+        top: 610px !important;
+        left: 5% !important;
+    }
+
+
+    /* 7 — VISUALIZATION */
+
+    .node-visualization {
+        top: 610px !important;
+        right: 5% !important;
+        left: auto !important;
+    }
+
+
+    /* 8 — OCR */
+
+    .node-ocr {
+        top: 785px !important;
+        left: 50% !important;
+
+        transform: translateX(-50%) !important;
+    }
+
+
+    /* =====================================================
+       PREVENT OTHER MOBILE CSS FROM HIDING TECH CONTENT
+       ===================================================== */
+
+    .tech-core .node,
+    .tech-core .core-card,
+    .tech-core .circuit-lines,
+    .tech-core .core-glow {
+        visibility: visible !important;
+    }
+
+}
     /* ---------- PROJECTS ---------- */
     .projects {
         width: 100% !important;
