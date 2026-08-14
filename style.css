@@ -3022,9 +3022,9 @@ section {
 
         font-family: 'Bebas Neue', sans-serif !important;
 
-        font-size: 100px !important;
+        font-size: 200px !important;
 
-        line-height: 0.9 !important;
+        line-height: 2 !important;
 
         letter-spacing: -10px !important;
 
@@ -3032,7 +3032,7 @@ section {
 
         text-align: center !important;
 
-        color: #d9d9d9 !important;
+        color: #e51212 !important;
 
         z-index: 2 !important;
     }
@@ -3050,8 +3050,8 @@ section {
         left: 50% !important;
         top: 50% !important;
 
-        width: 310px !important;
-        height: 430px !important;
+        width: 250px !important;
+        height: 350px !important;
 
         margin: 0 !important;
 
