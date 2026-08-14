@@ -4096,105 +4096,128 @@ section {
         font-size: 9px !important;
     }
 
-     .career {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        padding: 100px 0 140px;
+     /* =====================================================
+       JOURNEY — DESKTOP-STYLE ZIG ZAG ON MOBILE
+       ===================================================== */
+
+    .career {
+        position: relative !important;
+
+        width: 100% !important;
+
+        overflow: hidden !important;
+
+        padding: 100px 0 150px !important;
+
+        box-sizing: border-box;
     }
 
-    /* Center vertical line */
+
+    /* Center timeline */
 
     .career-line {
         position: absolute !important;
 
-        top: 0;
-        bottom: 0;
-
         left: 50% !important;
+
+        top: 0 !important;
+        bottom: 0 !important;
 
         width: 2px !important;
 
-        transform: translateX(-50%);
+        transform: translateX(-50%) !important;
 
-        z-index: 1;
+        z-index: 1 !important;
     }
 
 
-    /* Every journey item remains two-sided */
+    /* Every item = two columns */
 
     .career-item,
     .career-item.reverse {
-        position: relative;
+        position: relative !important;
 
         width: 100% !important;
 
-        min-height: 280px;
+        min-height: 300px !important;
+
+        margin: 0 0 40px !important;
+
+        padding: 0 !important;
 
         display: grid !important;
 
         grid-template-columns: 1fr 1fr !important;
 
-        align-items: center;
-
-        margin-bottom: 70px;
-
-        padding: 0 !important;
+        align-items: center !important;
     }
 
 
-    /* Normal item */
+    /* Normal:
+       LEFT = heading
+       RIGHT = description
+    */
 
     .career-item:not(.reverse) .career-left {
-        grid-column: 1;
-        text-align: right;
+        grid-column: 1 !important;
+        grid-row: 1 !important;
 
-        padding: 0 25px 0 15px;
+        text-align: right !important;
+
+        padding: 0 25px 0 12px !important;
     }
 
     .career-item:not(.reverse) .career-right {
-        grid-column: 2;
-        text-align: left;
+        grid-column: 2 !important;
+        grid-row: 1 !important;
 
-        padding: 0 15px 0 25px;
+        text-align: left !important;
+
+        padding: 0 12px 0 25px !important;
     }
 
 
-    /* Reverse item */
+    /* Reverse:
+       LEFT side = description
+       RIGHT side = heading
+    */
 
     .career-item.reverse .career-left {
-        grid-column: 2;
-        grid-row: 1;
+        grid-column: 2 !important;
+        grid-row: 1 !important;
 
-        text-align: left;
+        text-align: left !important;
 
-        padding: 0 15px 0 25px;
+        padding: 0 12px 0 25px !important;
     }
 
     .career-item.reverse .career-right {
-        grid-column: 1;
-        grid-row: 1;
+        grid-column: 1 !important;
+        grid-row: 1 !important;
 
-        text-align: right;
+        text-align: right !important;
 
-        padding: 0 25px 0 15px;
+        padding: 0 25px 0 12px !important;
     }
 
 
-    /* Make sure the zig-zag content stays visible */
+    /* Keep content visible */
 
     .career-left,
     .career-right {
-        position: relative;
+        position: relative !important;
 
         width: 100% !important;
 
-        min-width: 0;
+        min-width: 0 !important;
 
-        z-index: 3;
+        z-index: 3 !important;
 
         opacity: 1 !important;
+
         visibility: visible !important;
+
+        box-sizing: border-box !important;
     }
 
 
@@ -4206,41 +4229,33 @@ section {
     .career-right h3 {
         font-size: clamp(17px, 5vw, 27px) !important;
 
-        line-height: 1.05;
+        line-height: 1.05 !important;
 
-        margin: 10px 0;
+        margin: 10px 0 !important;
     }
 
 
-    /* Journey descriptions */
+    /* Journey paragraphs */
 
     .career-left p,
     .career-right p {
         font-size: 12px !important;
 
-        line-height: 1.7;
+        line-height: 1.65 !important;
 
-        margin: 12px 0;
+        margin: 12px 0 !important;
 
-        max-width: 160px;
+        max-width: 160px !important;
     }
 
 
-    /* Keep labels small */
+    /* Journey labels */
 
-    .career-label,
-    .career-tag,
-    .career-item span {
+    .career-left span,
+    .career-right span {
         font-size: 9px !important;
 
-        letter-spacing: 3px;
-    }
-
-
-    /* Numbers */
-
-    .career-number {
-        font-size: 35px !important;
+        letter-spacing: 2px !important;
     }
 
 
